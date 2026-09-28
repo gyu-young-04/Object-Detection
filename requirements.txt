@@ -1,0 +1,10 @@
+# torch는 CPU 버전으로 별도 설치 (공식 wheel이 index-url을 따로 씀):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#
+# 이후 나머지 패키지 설치:
+#   pip install -r requirements.txt
+
+transformers>=5.17.0
+pillow>=12.3.0
+requests>=2.34.0
+accelerate>=1.15.0
