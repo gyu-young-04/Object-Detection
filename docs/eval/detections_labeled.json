@@ -1,0 +1,1393 @@
+{
+  "no1.jpg": {
+    "first_result_seconds": 2.7,
+    "total_seconds": 16.4,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 2,
+        "seconds": 2.7
+      },
+      {
+        "category": "book",
+        "count": 1,
+        "seconds": 5.3
+      },
+      {
+        "category": "bag",
+        "count": 1,
+        "seconds": 8.1
+      },
+      {
+        "category": "bottle",
+        "count": 0,
+        "seconds": 10.8
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 13.6
+      },
+      {
+        "category": "box",
+        "count": 1,
+        "seconds": 16.4
+      }
+    ],
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.536,
+        "box": [
+          168.5,
+          148.0,
+          371.8,
+          261.0
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.356,
+        "box": [
+          290.8,
+          188.1,
+          418.0,
+          264.4
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "book",
+        "score": 0.353,
+        "box": [
+          183.1,
+          432.5,
+          309.2,
+          514.1
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다"
+      },
+      {
+        "category": "bag",
+        "score": 0.41,
+        "box": [
+          122.5,
+          342.3,
+          255.1,
+          466.1
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.416,
+        "box": [
+          122.8,
+          342.5,
+          255.0,
+          466.1
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      }
+    ]
+  },
+  "web1.webp": {
+    "first_result_seconds": 3.0,
+    "total_seconds": 17.0,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 1,
+        "seconds": 3.0
+      },
+      {
+        "category": "book",
+        "count": 1,
+        "seconds": 5.7
+      },
+      {
+        "category": "bag",
+        "count": 1,
+        "seconds": 8.6
+      },
+      {
+        "category": "bottle",
+        "count": 2,
+        "seconds": 11.4
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 14.1
+      },
+      {
+        "category": "box",
+        "count": 0,
+        "seconds": 17.0
+      }
+    ],
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.36,
+        "box": [
+          247.8,
+          753.7,
+          1219.4,
+          911.3
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "book",
+        "score": 0.313,
+        "box": [
+          1041.4,
+          459.8,
+          1195.1,
+          515.7
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다"
+      },
+      {
+        "category": "bag",
+        "score": 0.449,
+        "box": [
+          912.6,
+          338.2,
+          990.7,
+          487.8
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.544,
+        "box": [
+          451.9,
+          244.8,
+          474.2,
+          322.2
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.412,
+        "box": [
+          427.7,
+          274.0,
+          452.0,
+          325.1
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      }
+    ]
+  },
+  "web2.webp": {
+    "first_result_seconds": 2.3,
+    "total_seconds": 14.1,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 4,
+        "seconds": 2.3
+      },
+      {
+        "category": "book",
+        "count": 2,
+        "seconds": 4.7
+      },
+      {
+        "category": "bag",
+        "count": 0,
+        "seconds": 7.1
+      },
+      {
+        "category": "bottle",
+        "count": 2,
+        "seconds": 9.3
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 11.7
+      },
+      {
+        "category": "box",
+        "count": 2,
+        "seconds": 14.1
+      }
+    ],
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.406,
+        "box": [
+          665.6,
+          406.1,
+          734.5,
+          541.1
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.364,
+        "box": [
+          600.9,
+          380.7,
+          648.6,
+          496.8
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.355,
+        "box": [
+          635.8,
+          382.2,
+          683.7,
+          517.5
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.333,
+        "box": [
+          331.6,
+          498.1,
+          418.3,
+          630.3
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "book",
+        "score": 0.318,
+        "box": [
+          72.3,
+          809.5,
+          202.3,
+          911.5
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다"
+      },
+      {
+        "category": "book",
+        "score": 0.301,
+        "box": [
+          588.3,
+          715.6,
+          681.2,
+          810.4
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.322,
+        "box": [
+          351.9,
+          421.8,
+          371.4,
+          451.9
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.318,
+        "box": [
+          313.5,
+          754.4,
+          340.8,
+          815.3
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "box",
+        "score": 0.377,
+        "box": [
+          122.8,
+          441.7,
+          190.6,
+          510.3
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.319,
+        "box": [
+          557.4,
+          535.6,
+          654.1,
+          641.9
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      }
+    ]
+  },
+  "web3.png": {
+    "first_result_seconds": 2.5,
+    "total_seconds": 15.0,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 10,
+        "seconds": 2.5
+      },
+      {
+        "category": "book",
+        "count": 3,
+        "seconds": 4.9
+      },
+      {
+        "category": "bag",
+        "count": 1,
+        "seconds": 7.4
+      },
+      {
+        "category": "bottle",
+        "count": 3,
+        "seconds": 10.0
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 12.5
+      },
+      {
+        "category": "box",
+        "count": 1,
+        "seconds": 15.0
+      }
+    ],
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.362,
+        "box": [
+          79.3,
+          312.7,
+          188.9,
+          403.8
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.359,
+        "box": [
+          310.7,
+          209.4,
+          379.2,
+          308.9
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.349,
+        "box": [
+          176.0,
+          121.3,
+          320.8,
+          189.3
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.333,
+        "box": [
+          355.1,
+          34.6,
+          412.7,
+          94.1
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.33,
+        "box": [
+          200.1,
+          391.3,
+          327.2,
+          494.4
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.324,
+        "box": [
+          70.4,
+          450.3,
+          201.0,
+          501.9
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.311,
+        "box": [
+          76.6,
+          361.5,
+          186.8,
+          468.4
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.308,
+        "box": [
+          70.9,
+          307.8,
+          328.1,
+          500.8
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.303,
+        "box": [
+          82.9,
+          219.2,
+          176.0,
+          267.2
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.3,
+        "box": [
+          200.8,
+          327.6,
+          272.9,
+          397.6
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "book",
+        "score": 0.373,
+        "box": [
+          18.9,
+          261.4,
+          93.7,
+          302.4
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다"
+      },
+      {
+        "category": "book",
+        "score": 0.325,
+        "box": [
+          165.1,
+          213.1,
+          198.5,
+          244.1
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다"
+      },
+      {
+        "category": "book",
+        "score": 0.309,
+        "box": [
+          83.4,
+          219.5,
+          176.5,
+          267.4
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다"
+      },
+      {
+        "category": "bag",
+        "score": 0.315,
+        "box": [
+          200.3,
+          391.5,
+          327.5,
+          495.2
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.46,
+        "box": [
+          310.0,
+          395.4,
+          329.9,
+          431.4
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.351,
+        "box": [
+          178.8,
+          395.9,
+          202.6,
+          439.1
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.312,
+        "box": [
+          379.7,
+          225.9,
+          401.2,
+          254.3
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "box",
+        "score": 0.335,
+        "box": [
+          397.9,
+          38.1,
+          470.8,
+          108.1
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      }
+    ]
+  },
+  "web4.png": {
+    "first_result_seconds": 2.5,
+    "total_seconds": 14.5,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 4,
+        "seconds": 2.5
+      },
+      {
+        "category": "book",
+        "count": 0,
+        "seconds": 4.8
+      },
+      {
+        "category": "bag",
+        "count": 0,
+        "seconds": 7.1
+      },
+      {
+        "category": "bottle",
+        "count": 5,
+        "seconds": 9.5
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 11.9
+      },
+      {
+        "category": "box",
+        "count": 2,
+        "seconds": 14.5
+      }
+    ],
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.369,
+        "box": [
+          170.8,
+          376.1,
+          264.5,
+          436.6
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.329,
+        "box": [
+          0.1,
+          258.7,
+          82.1,
+          321.6
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.326,
+        "box": [
+          401.2,
+          279.1,
+          497.1,
+          331.6
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.304,
+        "box": [
+          111.3,
+          275.9,
+          186.0,
+          314.4
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.422,
+        "box": [
+          379.0,
+          399.0,
+          405.4,
+          450.3
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.397,
+        "box": [
+          400.4,
+          425.1,
+          433.2,
+          474.8
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.363,
+        "box": [
+          406.3,
+          200.7,
+          420.3,
+          224.9
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.315,
+        "box": [
+          113.9,
+          185.5,
+          124.2,
+          212.3
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.304,
+        "box": [
+          388.3,
+          203.7,
+          398.3,
+          222.6
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "box",
+        "score": 0.45,
+        "box": [
+          207.1,
+          225.5,
+          291.6,
+          285.2
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.355,
+        "box": [
+          359.1,
+          157.8,
+          434.8,
+          223.2
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      }
+    ]
+  },
+  "web5.webp": {
+    "first_result_seconds": 3.1,
+    "total_seconds": 18.5,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 4,
+        "seconds": 3.1
+      },
+      {
+        "category": "book",
+        "count": 0,
+        "seconds": 6.2
+      },
+      {
+        "category": "bag",
+        "count": 0,
+        "seconds": 9.3
+      },
+      {
+        "category": "bottle",
+        "count": 0,
+        "seconds": 12.4
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 15.4
+      },
+      {
+        "category": "box",
+        "count": 1,
+        "seconds": 18.5
+      }
+    ],
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.585,
+        "box": [
+          233.6,
+          220.4,
+          311.3,
+          378.4
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.524,
+        "box": [
+          216.3,
+          409.2,
+          329.1,
+          531.1
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.361,
+        "box": [
+          0.4,
+          574.1,
+          135.8,
+          831.2
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.338,
+        "box": [
+          104.7,
+          96.7,
+          230.2,
+          340.3
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "box",
+        "score": 0.458,
+        "box": [
+          406.5,
+          278.5,
+          518.2,
+          364.2
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      }
+    ]
+  },
+  "web6.webp": {
+    "first_result_seconds": 3.2,
+    "total_seconds": 18.3,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 4,
+        "seconds": 3.2
+      },
+      {
+        "category": "book",
+        "count": 0,
+        "seconds": 6.4
+      },
+      {
+        "category": "bag",
+        "count": 2,
+        "seconds": 9.3
+      },
+      {
+        "category": "bottle",
+        "count": 2,
+        "seconds": 12.3
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 15.4
+      },
+      {
+        "category": "box",
+        "count": 3,
+        "seconds": 18.3
+      }
+    ],
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.389,
+        "box": [
+          381.9,
+          344.0,
+          476.8,
+          402.9
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.387,
+        "box": [
+          198.2,
+          392.6,
+          367.0,
+          515.3
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.363,
+        "box": [
+          481.5,
+          -0.4,
+          761.7,
+          561.6
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "clothes",
+        "score": 0.306,
+        "box": [
+          608.5,
+          0.2,
+          762.0,
+          254.4
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "bag",
+        "score": 0.401,
+        "box": [
+          198.4,
+          378.4,
+          367.5,
+          516.0
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다"
+      },
+      {
+        "category": "bag",
+        "score": 0.315,
+        "box": [
+          310.9,
+          233.2,
+          447.8,
+          358.2
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.39,
+        "box": [
+          430.6,
+          109.8,
+          440.1,
+          137.2
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.302,
+        "box": [
+          338.5,
+          111.8,
+          348.5,
+          141.1
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "box",
+        "score": 0.432,
+        "box": [
+          479.4,
+          0.2,
+          589.7,
+          40.4
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.332,
+        "box": [
+          96.4,
+          235.9,
+          162.6,
+          295.6
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.3,
+        "box": [
+          88.2,
+          127.2,
+          144.7,
+          165.5
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      }
+    ]
+  },
+  "web7.webp": {
+    "first_result_seconds": 11.8,
+    "total_seconds": 17.7,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 0,
+        "seconds": 2.9
+      },
+      {
+        "category": "book",
+        "count": 0,
+        "seconds": 5.9
+      },
+      {
+        "category": "bag",
+        "count": 0,
+        "seconds": 8.8
+      },
+      {
+        "category": "bottle",
+        "count": 1,
+        "seconds": 11.8
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 14.9
+      },
+      {
+        "category": "box",
+        "count": 0,
+        "seconds": 17.7
+      }
+    ],
+    "detections": [
+      {
+        "category": "bottle",
+        "score": 0.507,
+        "box": [
+          478.4,
+          237.7,
+          487.2,
+          255.9
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      }
+    ]
+  },
+  "web8.webp": {
+    "first_result_seconds": 17.5,
+    "total_seconds": 17.5,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 0,
+        "seconds": 3.0
+      },
+      {
+        "category": "book",
+        "count": 0,
+        "seconds": 5.9
+      },
+      {
+        "category": "bag",
+        "count": 0,
+        "seconds": 8.9
+      },
+      {
+        "category": "bottle",
+        "count": 0,
+        "seconds": 11.7
+      },
+      {
+        "category": "shoes",
+        "count": 0,
+        "seconds": 14.5
+      },
+      {
+        "category": "box",
+        "count": 2,
+        "seconds": 17.5
+      }
+    ],
+    "detections": [
+      {
+        "category": "box",
+        "score": 0.39,
+        "box": [
+          235.1,
+          246.3,
+          276.8,
+          285.5
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.366,
+        "box": [
+          224.5,
+          211.3,
+          275.4,
+          253.9
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      }
+    ]
+  },
+  "web9.png": {
+    "first_result_seconds": 2.5,
+    "total_seconds": 15.2,
+    "nested_removed": 0,
+    "timeline": [
+      {
+        "category": "clothes",
+        "count": 1,
+        "seconds": 2.5
+      },
+      {
+        "category": "book",
+        "count": 0,
+        "seconds": 5.1
+      },
+      {
+        "category": "bag",
+        "count": 0,
+        "seconds": 7.7
+      },
+      {
+        "category": "bottle",
+        "count": 2,
+        "seconds": 10.0
+      },
+      {
+        "category": "shoes",
+        "count": 1,
+        "seconds": 12.6
+      },
+      {
+        "category": "box",
+        "count": 5,
+        "seconds": 15.2
+      }
+    ],
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.463,
+        "box": [
+          0.2,
+          246.4,
+          323.8,
+          476.6
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.32,
+        "box": [
+          376.2,
+          385.3,
+          389.4,
+          420.1
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "bottle",
+        "score": 0.309,
+        "box": [
+          449.9,
+          419.6,
+          481.9,
+          475.6
+        ],
+        "label_ko": "병",
+        "destination": "분리수거",
+        "reason": "빈 병이라면 분리수거로 보냅니다"
+      },
+      {
+        "category": "shoes",
+        "score": 0.416,
+        "box": [
+          375.7,
+          385.4,
+          389.3,
+          419.8
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다"
+      },
+      {
+        "category": "box",
+        "score": 0.399,
+        "box": [
+          54.1,
+          74.1,
+          89.5,
+          102.2
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.398,
+        "box": [
+          5.9,
+          48.5,
+          55.6,
+          100.3
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.32,
+        "box": [
+          290.1,
+          210.7,
+          331.6,
+          262.1
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.314,
+        "box": [
+          193.8,
+          80.2,
+          233.8,
+          110.6
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      },
+      {
+        "category": "box",
+        "score": 0.306,
+        "box": [
+          132.1,
+          72.3,
+          232.8,
+          110.5
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다"
+      }
+    ]
+  }
+}

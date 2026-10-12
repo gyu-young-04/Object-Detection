@@ -8,7 +8,8 @@ import random
 from merge import iou, remove_nested
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DETECTIONS = os.path.join(ROOT, "outputs", "detections_400_nocontain.json")
+# 판정은 이 파일의 박스 번호에 묶여 있으므로, 파이프라인을 다시 돌려도 바뀌지 않게 고정해둔 사본을 쓴다
+DETECTIONS = os.path.join(ROOT, "docs", "eval", "detections_labeled.json")
 LABELS = os.path.join(ROOT, "docs", "eval", "precision_labels.json")
 CONTROL_PHOTOS = {"web7.webp", "web8.webp"}  # 어지럽지 않은 작업실 (대조군)
 

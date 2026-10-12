@@ -1,6 +1,8 @@
-# [merge.py] 겹치는 박스를 정리한다. 외부 도구 없이 순수 계산만 한다.
+# [merge.py] 겹치는 박스를 정리하고, 여러 사진의 결과를 합친다. 외부 도구 없이 순수 계산만 한다.
 # 흐름: 겹침 계산(iou, inside_ratio) -> remove_duplicates(같은 물건의 중복 제거)
 #                                  -> remove_nested(큰 덩어리 안에 포개진 작은 박스 제거)
+#                                  -> remove_conflicts(카테고리가 다른데 같은 위치인 박스 정리)
+#       merge_photos: 같은 방을 여러 각도로 찍은 사진들의 결과를 하나로 합친다(합집합)
 
 
 def box_area(box):
@@ -65,3 +67,30 @@ def remove_nested(detections, contain_ratio=0.8):
         if not nested:
             kept.append(d)
     return kept
+
+
+def remove_conflicts(detections, iou_threshold=0.7):
+    # 카테고리가 다른데 거의 같은 위치에 겹친 박스는, 같은 물건을 서로 다른 이름으로 부른 것으로 보고
+    # 점수가 높은 쪽만 남긴다. (카테고리 우선순위로 정하는 것보다 점수로 정하는 쪽이 나았다: docs/devlog.md)
+    kept = []
+    for d in sorted(detections, key=lambda d: d["score"], reverse=True):
+        conflict = False
+        for k in kept:
+            if k["category"] != d["category"] and iou(k["box"], d["box"]) > iou_threshold:
+                conflict = True
+                break
+        if not conflict:
+            kept.append(d)
+    # 원래 순서(카테고리 우선순위 순)를 유지해서 돌려준다. id()는 "같은 객체인지" 구분하는 번호
+    kept_ids = {id(d) for d in kept}
+    return [d for d in detections if id(d) in kept_ids]
+
+
+def merge_photos(results_by_photo, photo_names):
+    # 같은 방을 여러 각도로 찍은 사진들의 탐지 결과를 하나의 목록으로 합친다(합집합).
+    # 사진마다 좌표계가 달라서 박스끼리 비교하지 않고 그대로 이어붙인다.
+    # 그래서 같은 물건이 두 사진에 함께 찍혔다면 두 번 집계될 수 있다. (잘못 합치는 것보다 안전한 쪽을 택한 것)
+    merged = []
+    for name in photo_names:
+        merged += results_by_photo[name]
+    return merged
