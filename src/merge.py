@@ -1,6 +1,7 @@
 # [merge.py] 겹치는 박스를 정리하고, 여러 사진의 결과를 합친다. 외부 도구 없이 순수 계산만 한다.
 # 흐름: 겹침 계산(iou, inside_ratio) -> remove_duplicates(같은 물건의 중복 제거)
-#                                  -> remove_nested(큰 덩어리 안에 포개진 작은 박스 제거)
+#                                  -> remove_nested(큰 덩어리 안에 포개진 작은 박스 제거: 덩어리 단위)
+#                                     remove_containers(작은 박스를 품은 큰 박스 제거: 개별 단위, 현재 화면에서 사용)
 #                                  -> remove_conflicts(카테고리가 다른데 같은 위치인 박스 정리)
 #       merge_photos: 같은 방을 여러 각도로 찍은 사진들의 결과를 하나로 합친다(합집합)
 
@@ -65,6 +66,24 @@ def remove_nested(detections, contain_ratio=0.8):
                 nested = True
                 break
         if not nested:
+            kept.append(d)
+    return kept
+
+
+def remove_containers(detections, contain_ratio=0.8):
+    # remove_nested의 반대 방향: 같은 카테고리에서 작은 박스를 품고 있는 "큰 박스"를 버리고 작은 박스를 남긴다.
+    # 박스 하나를 물건 하나에 가깝게 보는 "개별 단위" 안내용이다. (2026-11-23 판정 306건: 정밀도는 거의 같고 맞는 박스를 더 많이 보존)
+    kept = []
+    for d in detections:
+        container = False
+        for other in detections:
+            if other is d or other["category"] != d["category"]:
+                continue
+            # other가 d보다 작고, other의 contain_ratio 이상이 d 안에 들어 있으면 d는 other를 품은 큰 박스
+            if box_area(other["box"]) < box_area(d["box"]) and inside_ratio(other["box"], d["box"]) >= contain_ratio:
+                container = True
+                break
+        if not container:
             kept.append(d)
     return kept
 

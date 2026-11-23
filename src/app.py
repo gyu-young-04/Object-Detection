@@ -22,6 +22,7 @@ from flask import Flask, jsonify, request, send_from_directory
 # (대략 이 폴더에 존재하는 특정파일을 간단히 브라우저한테 보내는 도구)
 
 #app.py와 같은 경로이기에 이름으로만으로도 불러올수있음
+from merge import remove_containers
 from store import add_feedback, category_stats, load_feedback, rank_categories
 
 #이전에 만들어둔 파이썬을 import로 함수 받아오기
@@ -50,9 +51,12 @@ def home():
 
 @app.route("/api/results")  #화면을 열면 index.html이 실행되는데 그 과정에서 요청된 api
 def results():
-    # 저장된 탐지 결과(JSON 파일)를 읽어서 그대로 돌려준다
+    # 저장된 탐지 결과(JSON 파일)를 읽고, 작은 박스를 품은 큰 박스를 걷어낸 뒤(개별 단위) 돌려준다
     with open(RESULTS_PATH, encoding="utf-8") as f:
-        return jsonify(json.load(f))
+        data = json.load(f)
+    for r in data.values():
+        r["detections"] = remove_containers(r["detections"])
+    return jsonify(data)
 
 
 #사진이름으로 해당 사진을 브라우저에게 보내는 api
