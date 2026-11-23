@@ -8,3 +8,4 @@ transformers>=5.17.0
 pillow>=12.3.0
 requests>=2.34.0
 accelerate>=1.15.0
+flask>=3.1.3

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>정리 가이드 판정</title>
+<style>
+  :root { --bg:#fafaf8; --fg:#1d1d1b; --card:#ffffff; --line:#d9d8d2; --muted:#6b6a64; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#161615; --fg:#ececea; --card:#222221; --line:#3a3a38; --muted:#a3a29b; }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; padding: 16px; background: var(--bg); color: var(--fg); font-family: "Malgun Gothic", system-ui, sans-serif; }
+  h1 { font-size: 18px; margin: 0 0 12px; }
+  .layout { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+  .main { flex: 2 1 480px; min-width: 0; }
+  .side { flex: 1 1 280px; min-width: 0; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin-bottom: 12px; }
+  .nav { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .muted { color: var(--muted); font-size: 13px; }
+  button { font: inherit; padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--fg); cursor: pointer; }
+  button:disabled { opacity: .45; cursor: default; }
+  .wrap { position: relative; display: inline-block; max-width: 100%; line-height: 0; }
+  .wrap img { max-width: 100%; height: auto; display: block; border-radius: 6px; }
+  #layer { position: absolute; inset: 0; }
+  .box { position: absolute; border: 2px solid var(--c); cursor: pointer; }
+  .box:hover { background: rgba(255, 255, 255, .18); }
+  .box.selected { outline: 3px solid #fff; box-shadow: 0 0 0 2px #000; }
+  .box.v-O { background: rgba(42, 157, 111, .30); }
+  .box.v-P { background: rgba(58, 134, 255, .30); }
+  .box.v-X { background: rgba(230, 57, 70, .30); }
+  .tag { position: absolute; left: 0; top: 0; padding: 0 4px; font-size: 11px; line-height: 1.4; color: #fff; background: var(--c); white-space: nowrap; }
+  #detail { white-space: pre-line; line-height: 1.5; margin-bottom: 8px; }
+  #btns { display: flex; gap: 6px; flex-wrap: wrap; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 6px; }
+  th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<h1>정리 가이드 · 박스 판정</h1>
+<div class="layout">
+  <div class="main">
+    <div class="nav">
+      <button onclick="showPhoto(idx - 1)">◀ 이전</button>
+      <button onclick="showPhoto(idx + 1)">다음 ▶</button>
+      <span id="pos" class="muted"></span>
+    </div>
+    <div class="wrap">
+      <img id="img" alt="방 사진">
+      <div id="layer"></div>
+    </div>
+  </div>
+  <div class="side">
+    <div class="card">
+      <div id="detail"></div>
+      <div id="btns" hidden>
+        <button onclick="judge('O')">맞아요</button>
+        <button onclick="judge('P')">이미 제자리</button>
+        <button onclick="judge('X')">틀려요</button>
+      </div>
+      <p class="muted">맞아요: 그 물건이 맞고 정리가 필요해요 · 이미 제자리: 물건은 맞는데 이미 제자리에 있어요 · 틀려요: 그 물건이 아니에요</p>
+    </div>
+    <div class="card">
+      <b>내 방 통계 (안내 순서)</b>
+      <table>
+        <thead><tr><th>카테고리</th><th>판정</th><th>정밀도</th><th></th></tr></thead>
+        <tbody id="stats"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+// 목적지별 박스 색 (visualize.py의 목적지와 같은 이름)
+const DEST_COLOR = {"옷장": "#e63946", "책장": "#1d6fdb", "가방 걸이": "#2a9d8f", "분리수거": "#f4a261",
+                    "신발장": "#8338ec", "수납함": "#06d6a0", "기타": "#6e6e6e"};
+const VERDICT_KO = {O: "맞아요", P: "이미 제자리", X: "틀려요"};
+const MARK = {O: "✓", P: "●", X: "✗"};
+
+let results = {};   // {사진이름: {detections: [...]}}  서버에서 받은 탐지 결과
+let names = [];     // 사진 이름 목록
+let idx = 0;        // 지금 보는 사진 번호
+let selected = null;  // 선택한 박스 번호 (없으면 null)
+let judged = {};    // {"사진|좌표": "O"}  이미 판정한 박스
+const catKo = {};   // {"shoes": "신발"}
+
+const $ = (id) => document.getElementById(id);
+const keyOf = (photo, box) => photo + "|" + box.join(",");
+
+async function init() {
+  // 탐지 결과와 이미 저장된 판정을 서버에서 받아 온다 (GET 요청 두 개를 동시에)
+  const [r, f] = await Promise.all([
+    fetch("/api/results").then((x) => x.json()),
+    fetch("/api/feedback").then((x) => x.json()),
+  ]);
+  results = r;
+  names = Object.keys(r);
+  f.forEach((x) => { judged[keyOf(x.photo, x.box)] = x.verdict; });
+  names.forEach((n) => r[n].detections.forEach((d) => { catKo[d.category] = d.label_ko; }));
+  showPhoto(0);
+  loadStats();
+}
+
+function showPhoto(i) {
+  idx = (i + names.length) % names.length;
+  selected = null;
+  const img = $("img");
+  $("pos").textContent = `${idx + 1} / ${names.length}  ${names[idx]}`;
+  img.onload = drawBoxes;  // 사진이 다 불러와진 뒤에 박스를 그린다
+  img.src = "/photos/" + encodeURIComponent(names[idx]);
+  $("layer").innerHTML = "";
+  renderDetail();
+}
+
+function drawBoxes() {
+  const img = $("img"), layer = $("layer");
+  layer.innerHTML = "";
+  if (!img.naturalWidth) return;
+  const W = img.naturalWidth, H = img.naturalHeight;
+  const dets = results[names[idx]].detections;
+  // 넓은 박스는 아래에, 좁은 박스는 위에 쌓는다. 큰 박스 안의 작은 박스도 눌리게 하려는 것이다.
+  const area = (d) => (d.box[2] - d.box[0]) * (d.box[3] - d.box[1]);
+  const bySize = dets.map((d, i) => i).sort((a, b) => area(dets[b]) - area(dets[a]));  // 넓은 것부터 나열
+  dets.forEach((d, i) => {
+    const [x1, y1, x2, y2] = d.box;
+    const el = document.createElement("div");
+    el.className = "box";
+    el.id = "box" + i;
+    // 좌표를 사진 크기에 대한 %로 바꿔서, 화면 크기가 달라져도 위치가 맞게 한다
+    el.style.cssText = `left:${x1 / W * 100}%;top:${y1 / H * 100}%;width:${(x2 - x1) / W * 100}%;height:${(y2 - y1) / H * 100}%;--c:${DEST_COLOR[d.destination] || "#6e6e6e"}`;
+    el.style.zIndex = bySize.indexOf(i) + 1;  // 좁을수록 숫자가 커서 위에 놓인다
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    el.appendChild(tag);
+    el.onclick = () => select(i);
+    layer.appendChild(el);
+    paintBox(i);
+  });
+}
+
+function paintBox(i) {
+  // 박스 하나의 겉모양(판정 색, 선택 표시, 이름표)을 현재 상태에 맞게 다시 칠한다
+  const d = results[names[idx]].detections[i];
+  const el = $("box" + i);
+  const v = judged[keyOf(names[idx], d.box)];
+  el.classList.remove("v-O", "v-P", "v-X");
+  if (v) el.classList.add("v-" + v);
+  el.classList.toggle("selected", selected === i);
+  el.firstChild.textContent = `${i + 1} ${d.label_ko}${v ? " " + MARK[v] : ""}`;
+}
+
+function select(i) {
+  const before = selected;
+  selected = i;
+  if (before !== null) paintBox(before);
+  paintBox(i);
+  renderDetail();
+}
+
+function renderDetail() {
+  const name = names[idx], dets = results[name].detections;
+  if (selected === null) {
+    $("detail").textContent = `박스 ${dets.length}개. 박스를 눌러 판정하세요.`;
+    $("btns").hidden = true;
+    return;
+  }
+  const d = dets[selected], v = judged[keyOf(name, d.box)];
+  $("detail").textContent = `${selected + 1}번 ${d.label_ko} → ${d.destination} (점수 ${d.score.toFixed(2)})\n${d.reason}` + (v ? `\n판정함: ${VERDICT_KO[v]}` : "");
+  $("btns").hidden = false;
+  document.querySelectorAll("#btns button").forEach((b) => { b.disabled = !!v; });  // 이미 판정했으면 버튼을 막는다
+}
+
+async function judge(verdict) {
+  const name = names[idx], d = results[name].detections[selected];
+  // 판정을 서버로 보낸다 (POST). 서버가 store.add_feedback으로 data/feedback.json에 저장한다
+  const res = await fetch("/api/feedback", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({photo: name, category: d.category, score: d.score, box: d.box, verdict}),
+  });
+  const out = await res.json();
+  if (!out.ok) { alert("저장 실패: " + out.error); return; }
+  judged[keyOf(name, d.box)] = verdict;
+  paintBox(selected);
+  renderDetail();
+  loadStats();
+}
+
+async function loadStats() {
+  const {stats, order} = await (await fetch("/api/stats")).json();
+  const body = $("stats");
+  body.innerHTML = "";
+  if (!order.length) {
+    body.innerHTML = '<tr><td colspan="4" class="muted">아직 판정이 없어요</td></tr>';
+    return;
+  }
+  order.forEach((c) => {
+    const s = stats[c], tr = document.createElement("tr");
+    [catKo[c] || c, s.total + "건", Math.round(s.precision * 100) + "%", s.enough ? "" : "표본 부족"].forEach((t) => {
+      const td = document.createElement("td");
+      td.textContent = t;
+      tr.appendChild(td);
+    });
+    body.appendChild(tr);
+  });
+}
+
+init();
+</script>
+</body>
+</html>
