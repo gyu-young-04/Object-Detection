@@ -1,0 +1,1166 @@
+{
+  "pexels_18676193.jpeg": {
+    "first_result_seconds": 15.0,
+    "total_seconds": 18.0,
+    "detections": [
+      {
+        "category": "shoes",
+        "score": 0.645,
+        "box": [
+          330.0,
+          977.9,
+          550.5,
+          1266.0
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.644,
+        "box": [
+          434.1,
+          1300.1,
+          624.4,
+          1610.4
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.639,
+        "box": [
+          551.9,
+          1307.3,
+          739.1,
+          1619.2
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.62,
+        "box": [
+          916.6,
+          1405.4,
+          1061.7,
+          1736.4
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.614,
+        "box": [
+          567.9,
+          1601.9,
+          741.1,
+          1894.4
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.611,
+        "box": [
+          779.8,
+          1438.0,
+          929.3,
+          1751.2
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.61,
+        "box": [
+          983.9,
+          2010.9,
+          1284.2,
+          2379.4
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.609,
+        "box": [
+          705.0,
+          1725.3,
+          950.9,
+          1970.8
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.605,
+        "box": [
+          168.8,
+          974.8,
+          403.0,
+          1235.0
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.602,
+        "box": [
+          946.0,
+          1776.8,
+          1341.5,
+          2029.2
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.588,
+        "box": [
+          943.7,
+          1708.3,
+          1304.9,
+          1846.9
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.543,
+        "box": [
+          108.6,
+          1192.9,
+          271.3,
+          1480.6
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.476,
+        "box": [
+          0.1,
+          1922.1,
+          169.5,
+          2116.3
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.437,
+        "box": [
+          0.2,
+          1752.6,
+          206.7,
+          1930.7
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.394,
+        "box": [
+          0.9,
+          1519.2,
+          265.7,
+          1785.8
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.35,
+        "box": [
+          0.3,
+          2140.3,
+          113.3,
+          2385.6
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.306,
+        "box": [
+          229.0,
+          1219.5,
+          354.7,
+          1372.9
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_18676193.jpeg"
+      },
+      {
+        "category": "box",
+        "score": 0.516,
+        "box": [
+          800.2,
+          232.5,
+          1528.0,
+          1138.6
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다",
+        "photo": "pexels_18676193.jpeg"
+      }
+    ]
+  },
+  "pexels_20988472.jpeg": {
+    "first_result_seconds": 2.9,
+    "total_seconds": 20.3,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.469,
+        "box": [
+          409.0,
+          1520.9,
+          1177.4,
+          2011.9
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_20988472.jpeg"
+      },
+      {
+        "category": "bag",
+        "score": 0.773,
+        "box": [
+          391.5,
+          434.9,
+          1445.9,
+          1682.9
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다",
+        "photo": "pexels_20988472.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.531,
+        "box": [
+          177.2,
+          1771.4,
+          1066.9,
+          2204.0
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_20988472.jpeg"
+      }
+    ]
+  },
+  "pexels_267202.jpeg": {
+    "first_result_seconds": 3.1,
+    "total_seconds": 18.8,
+    "detections": [
+      {
+        "category": "shoes",
+        "score": 0.606,
+        "box": [
+          1075.2,
+          229.0,
+          1462.9,
+          998.5
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_267202.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.6,
+        "box": [
+          129.5,
+          204.3,
+          557.4,
+          990.9
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_267202.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.591,
+        "box": [
+          655.2,
+          467.1,
+          1275.6,
+          1078.2
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_267202.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.576,
+        "box": [
+          558.7,
+          49.7,
+          1265.4,
+          369.4
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_267202.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.547,
+        "box": [
+          477.6,
+          250.3,
+          1172.2,
+          937.8
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_267202.jpeg"
+      },
+      {
+        "category": "box",
+        "score": 0.761,
+        "box": [
+          1.1,
+          1.7,
+          1599.4,
+          1139.2
+        ],
+        "label_ko": "상자",
+        "destination": "수납함",
+        "reason": "상자는 수납하거나 정리해 둡니다",
+        "photo": "pexels_267202.jpeg"
+      }
+    ]
+  },
+  "pexels_9321607.jpeg": {
+    "first_result_seconds": 3.4,
+    "total_seconds": 20.6,
+    "detections": [
+      {
+        "category": "bag",
+        "score": 0.859,
+        "box": [
+          234.0,
+          442.0,
+          1274.2,
+          1891.7
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다",
+        "photo": "pexels_9321607.jpeg"
+      }
+    ]
+  },
+  "pexels_4887253.jpeg": {
+    "first_result_seconds": 3.5,
+    "total_seconds": 20.6,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.51,
+        "box": [
+          0.3,
+          102.4,
+          582.8,
+          1421.5
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_4887253.jpeg"
+      },
+      {
+        "category": "clothes",
+        "score": 0.446,
+        "box": [
+          1073.1,
+          658.3,
+          1599.8,
+          1651.2
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_4887253.jpeg"
+      },
+      {
+        "category": "clothes",
+        "score": 0.346,
+        "box": [
+          0.5,
+          103.2,
+          1600.2,
+          1657.4
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_4887253.jpeg"
+      },
+      {
+        "category": "clothes",
+        "score": 0.319,
+        "box": [
+          451.3,
+          654.9,
+          1598.4,
+          1651.9
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_4887253.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.414,
+        "box": [
+          -0.1,
+          1885.6,
+          609.4,
+          2286.8
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_4887253.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.358,
+        "box": [
+          -0.2,
+          2038.1,
+          658.6,
+          2397.7
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_4887253.jpeg"
+      },
+      {
+        "category": "bag",
+        "score": 0.761,
+        "box": [
+          178.4,
+          905.9,
+          1222.7,
+          2107.6
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다",
+        "photo": "pexels_4887253.jpeg"
+      }
+    ]
+  },
+  "pexels_5905436.jpeg": {
+    "first_result_seconds": 3.5,
+    "total_seconds": 20.1,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.684,
+        "box": [
+          729.4,
+          655.5,
+          1598.0,
+          1928.1
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_5905436.jpeg"
+      },
+      {
+        "category": "clothes",
+        "score": 0.456,
+        "box": [
+          0.1,
+          340.3,
+          641.3,
+          1389.5
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_5905436.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.446,
+        "box": [
+          1283.3,
+          490.6,
+          1600.0,
+          744.4
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_5905436.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.421,
+        "box": [
+          611.4,
+          200.4,
+          1599.5,
+          584.1
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_5905436.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.315,
+        "box": [
+          364.5,
+          0.1,
+          1045.7,
+          251.5
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_5905436.jpeg"
+      },
+      {
+        "category": "bag",
+        "score": 0.314,
+        "box": [
+          894.8,
+          110.5,
+          1306.9,
+          221.5
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다",
+        "photo": "pexels_5905436.jpeg"
+      }
+    ]
+  },
+  "pexels_8472909.jpeg": {
+    "first_result_seconds": 3.5,
+    "total_seconds": 55.9,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.468,
+        "box": [
+          1049.2,
+          0.7,
+          1598.3,
+          654.2
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_8472909.jpeg"
+      },
+      {
+        "category": "bag",
+        "score": 0.524,
+        "box": [
+          1048.3,
+          261.7,
+          1594.9,
+          655.6
+        ],
+        "label_ko": "가방",
+        "destination": "가방 걸이",
+        "reason": "가방은 걸이나 정해진 자리에 둡니다",
+        "photo": "pexels_8472909.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.648,
+        "box": [
+          671.0,
+          431.6,
+          821.8,
+          667.9
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_8472909.jpeg"
+      },
+      {
+        "category": "shoes",
+        "score": 0.639,
+        "box": [
+          728.9,
+          373.0,
+          877.1,
+          594.6
+        ],
+        "label_ko": "신발",
+        "destination": "신발장",
+        "reason": "신발은 신발장에 보관합니다",
+        "photo": "pexels_8472909.jpeg"
+      }
+    ]
+  },
+  "pexels_12212549.jpeg": {
+    "first_result_seconds": 12.9,
+    "total_seconds": 77.1,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.314,
+        "box": [
+          0.0,
+          0.4,
+          505.1,
+          260.2
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_12212549.jpeg"
+      }
+    ]
+  },
+  "pexels_17916550.jpeg": {
+    "first_result_seconds": 12.4,
+    "total_seconds": 74.7,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.437,
+        "box": [
+          553.2,
+          1433.1,
+          1367.2,
+          2336.7
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_17916550.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.381,
+        "box": [
+          724.2,
+          1667.1,
+          983.6,
+          1752.0
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_17916550.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.331,
+        "box": [
+          910.6,
+          1434.1,
+          1260.5,
+          1525.6
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_17916550.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.33,
+        "box": [
+          640.9,
+          1899.4,
+          990.1,
+          1961.8
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_17916550.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.313,
+        "box": [
+          843.4,
+          2024.7,
+          1297.4,
+          2124.3
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_17916550.jpeg"
+      }
+    ]
+  },
+  "pexels_8012235.jpeg": {
+    "first_result_seconds": 12.7,
+    "total_seconds": 76.0,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.372,
+        "box": [
+          756.7,
+          1529.0,
+          1152.2,
+          1800.0
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_8012235.jpeg"
+      },
+      {
+        "category": "clothes",
+        "score": 0.352,
+        "box": [
+          30.8,
+          1660.7,
+          377.3,
+          2035.0
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_8012235.jpeg"
+      },
+      {
+        "category": "clothes",
+        "score": 0.339,
+        "box": [
+          441.6,
+          1163.8,
+          701.6,
+          1767.6
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_8012235.jpeg"
+      },
+      {
+        "category": "clothes",
+        "score": 0.338,
+        "box": [
+          1153.3,
+          1448.8,
+          1598.3,
+          1867.6
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_8012235.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.397,
+        "box": [
+          606.9,
+          1848.3,
+          934.9,
+          2013.7
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_8012235.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.339,
+        "box": [
+          459.2,
+          1908.1,
+          847.5,
+          2197.7
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_8012235.jpeg"
+      }
+    ]
+  },
+  "pexels_3747507.jpeg": {
+    "first_result_seconds": 12.8,
+    "total_seconds": 77.9,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.52,
+        "box": [
+          -0.0,
+          -0.6,
+          1599.8,
+          2398.8
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_3747507.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.325,
+        "box": [
+          1044.0,
+          1428.5,
+          1350.5,
+          1673.8
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_3747507.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.306,
+        "box": [
+          680.5,
+          1740.3,
+          1014.1,
+          2013.6
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_3747507.jpeg"
+      }
+    ]
+  },
+  "pexels_7034092.jpeg": {
+    "first_result_seconds": 12.9,
+    "total_seconds": 77.1,
+    "detections": [
+      {
+        "category": "clothes",
+        "score": 0.437,
+        "box": [
+          0.3,
+          360.6,
+          1599.3,
+          2396.8
+        ],
+        "label_ko": "옷",
+        "destination": "옷장",
+        "reason": "옷은 옷장에 보관하는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.438,
+        "box": [
+          120.8,
+          639.0,
+          931.0,
+          964.0
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.426,
+        "box": [
+          173.4,
+          1175.5,
+          1016.0,
+          1660.4
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.422,
+        "box": [
+          923.4,
+          1193.6,
+          1599.0,
+          1493.3
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.408,
+        "box": [
+          121.7,
+          851.3,
+          956.7,
+          1102.8
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.404,
+        "box": [
+          124.8,
+          1098.3,
+          1028.1,
+          1391.9
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.402,
+        "box": [
+          1173.2,
+          1320.6,
+          1599.8,
+          2213.5
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.397,
+        "box": [
+          87.7,
+          943.4,
+          977.9,
+          1198.5
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.374,
+        "box": [
+          992.5,
+          1009.5,
+          1499.1,
+          1252.1
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.368,
+        "box": [
+          820.7,
+          543.3,
+          1383.6,
+          660.6
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.356,
+        "box": [
+          999.4,
+          869.4,
+          1528.0,
+          1137.1
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.353,
+        "box": [
+          911.7,
+          653.4,
+          1458.0,
+          849.8
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.34,
+        "box": [
+          811.0,
+          1421.1,
+          1598.7,
+          1834.2
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.325,
+        "box": [
+          810.5,
+          1465.2,
+          1191.0,
+          1810.9
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.319,
+        "box": [
+          1446.8,
+          709.4,
+          1599.9,
+          964.4
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.315,
+        "box": [
+          934.8,
+          770.0,
+          1451.5,
+          937.0
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.31,
+        "box": [
+          922.5,
+          356.6,
+          1589.1,
+          510.4
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      },
+      {
+        "category": "book",
+        "score": 0.308,
+        "box": [
+          1520.2,
+          989.8,
+          1599.5,
+          1192.6
+        ],
+        "label_ko": "책",
+        "destination": "책장",
+        "reason": "책은 책장에 꽂아두는 게 일반적입니다",
+        "photo": "pexels_7034092.jpeg"
+      }
+    ]
+  }
+}
