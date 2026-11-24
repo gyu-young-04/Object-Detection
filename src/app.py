@@ -35,8 +35,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATA_DIR = os.path.join(ROOT, "data")  # 사진 폴더
 WEB_DIR = os.path.join(ROOT, "web")  # 화면 파일 폴더 (html 저장된곳)
-RESULTS_PATH = os.path.join(ROOT, "outputs", "detections_new20_400_nocontain.json")  # 화면에 보여줄 탐지 결과
-#지금은 인터넷 사진 20개에 대한 결과만 보임
+# 화면에 보여줄 탐지 결과 파일들 (사진 이름이 겹치지 않아 그대로 합친다)
+RESULTS_PATHS = [
+    os.path.join(ROOT, "outputs", "detections_new20_400_nocontain.json"),  # 인터넷 사진 20장
+    os.path.join(ROOT, "outputs", "detections_set2_400_nocontain.json"),  # 신발·책·가방 보강 사진 12장
+]
+#지금은 인터넷 사진 32장에 대한 결과가 보임
 
 app = Flask(__name__)  # 서버 본체
 
@@ -51,9 +55,11 @@ def home():
 
 @app.route("/api/results")  #화면을 열면 index.html이 실행되는데 그 과정에서 요청된 api
 def results():
-    # 저장된 탐지 결과(JSON 파일)를 읽고, 작은 박스를 품은 큰 박스를 걷어낸 뒤(개별 단위) 돌려준다
-    with open(RESULTS_PATH, encoding="utf-8") as f:
-        data = json.load(f)
+    # 저장된 탐지 결과(JSON 파일들)를 읽어 하나로 합치고, 작은 박스를 품은 큰 박스를 걷어낸 뒤(개별 단위) 돌려준다
+    data = {}
+    for path in RESULTS_PATHS:
+        with open(path, encoding="utf-8") as f:
+            data.update(json.load(f))
     for r in data.values():
         r["detections"] = remove_containers(r["detections"])
     return jsonify(data)

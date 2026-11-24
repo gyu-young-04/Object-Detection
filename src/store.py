@@ -11,6 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEEDBACK_PATH = os.path.join(ROOT, "data", "feedback.json")  # data/는 git에 올라가지 않는다
 VERDICTS = ("O", "P", "X")  # O: 맞아요(정리 필요), P: 이미 제자리, X: 틀려요
 MIN_SAMPLES = 5  # 한 카테고리의 판정이 이 개수보다 적으면 "표본 부족"으로 본다
+MIN_PHOTOS = 3  # 판정이 이 장수보다 적은 사진에서만 나왔어도 "표본 부족" (한 장의 사진이 카테고리 전체를 대표하는 것을 막는다)
 
 
 
@@ -51,6 +52,7 @@ def category_stats(records):    #판정결과를 매개로 전달
     #   enough    = total >= MIN_SAMPLES   (표본이 충분한지)
     
     stats = {}  #빈 딕셔너리
+    per_photo = {}  # (카테고리, 사진 이름) -> [맞는 판정 수, 전체 판정 수]. 한 사진에 박스가 몰려도 사진 하나는 한 표만 갖게 하려고 센다
     # 판정을 하나씩 보면서 카테고리별 칸(total, O, P, X)에 센다
     for r in records: #판정에서 하나씩 꺼낸다
         if r["category"] not in stats: #이 카테고리를 처음 봤는가
@@ -59,14 +61,21 @@ def category_stats(records):    #판정결과를 매개로 전달
         s["total"] += 1
         s[r["verdict"]] += 1
         #실제 상태를 꺼냈으니 1 증가시켜줌
+        tally = per_photo.setdefault((r["category"], r["photo"]), [0, 0])
+        tally[0] += 1 if r["verdict"] in ("O", "P") else 0
+        tally[1] += 1
     
 
     # 다 센 뒤에 카테고리마다 정밀도와 표본 충분 여부를 계산해서 덧붙인다
     # stats에는 카테고리별로 판정결과가 저장된 상황
     # stats.values()의 경우는 카테고리의 집계표들
-    for s in stats.values():
+    for cat, s in stats.items():
         s["precision"] = round((s["O"] + s["P"]) / s["total"], 3)
-        s["enough"] = s["total"] >= MIN_SAMPLES
+        # 사진마다 정밀도를 먼저 구하고 평균을 낸다 (박스가 많은 사진이 통계를 끌고 가지 않게)
+        by_photo = [good / n for (c, _), (good, n) in per_photo.items() if c == cat]
+        s["photos"] = len(by_photo)
+        s["precision_by_photo"] = round(sum(by_photo) / len(by_photo), 3)
+        s["enough"] = s["total"] >= MIN_SAMPLES and s["photos"] >= MIN_PHOTOS
     return stats
 
 
@@ -84,10 +93,10 @@ if __name__ == "__main__":
     demo = os.path.join(ROOT, "outputs", "feedback_demo.json")
     if os.path.exists(demo):
         os.remove(demo)
-    for verdict in ["O", "O", "O", "O", "X"]:
-        add_feedback("a.jpg", "shoes", 0.5, [10, 20, 110, 220], verdict, demo)
+    for i, verdict in enumerate(["O", "O", "O", "O", "X"]):
+        add_feedback(f"a{i % 3}.jpg", "shoes", 0.5, [10, 20, 110, 220], verdict, demo)  # 사진 3장에 나눠 담는다
     for verdict in ["O", "X"]:
-        add_feedback("a.jpg", "clothes", 0.4, [200, 30, 400, 300], verdict, demo)
+        add_feedback("a0.jpg", "clothes", 0.4, [200, 30, 400, 300], verdict, demo)  # 사진 1장뿐
     stats = category_stats(load_feedback(demo))
     print(stats)
     print(rank_categories(stats))

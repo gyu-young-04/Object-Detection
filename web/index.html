@@ -197,7 +197,10 @@ async function loadStats() {
   }
   order.forEach((c) => {
     const s = stats[c], tr = document.createElement("tr");
-    [catKo[c] || c, s.total + "건", Math.round(s.precision * 100) + "%", s.enough ? "" : "표본 부족"].forEach((t) => {
+    // 서버가 옛 코드이면 photos, precision_by_photo가 없으므로 있을 때만 덧붙인다
+    const cnt = s.total + "건" + (s.photos !== undefined ? " · 사진 " + s.photos + "장" : "");
+    const pct = Math.round(s.precision * 100) + "%" + (s.precision_by_photo !== undefined ? " (사진별 " + Math.round(s.precision_by_photo * 100) + "%)" : "");
+    [catKo[c] || c, cnt, pct, s.enough ? "" : "표본 부족"].forEach((t) => {
       const td = document.createElement("td");
       td.textContent = t;
       tr.appendChild(td);
