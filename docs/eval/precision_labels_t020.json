@@ -1,0 +1,1267 @@
+{
+ "labeler": "Claude (박스를 잘라 붙인 모음 이미지로 판정, 사용자 검수 전 초안). OP는 이름이 맞음",
+ "date": "2026-11-25",
+ "source": "tiny, 해상도 400, 점수 0.20 이상 실행에서 0.30 미만 박스 중 무작위 표본: 0.25~0.30 구간 60건(전체 131건), 0.20~0.25 구간 30건(전체 243건)",
+ "boxes": [
+  {
+   "id": 1,
+   "photo": "no1.jpg",
+   "category": "bottle",
+   "score": 0.284,
+   "box": [
+    436.0,
+    441.0,
+    449.3,
+    479.3
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 2,
+   "photo": "pexels_12212549.jpeg",
+   "category": "book",
+   "score": 0.251,
+   "box": [
+    57.6,
+    90.4,
+    359.4,
+    313.8
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 3,
+   "photo": "pexels_17916550.jpeg",
+   "category": "book",
+   "score": 0.257,
+   "box": [
+    907.8,
+    1477.2,
+    1259.8,
+    1555.8
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 4,
+   "photo": "pexels_17916550.jpeg",
+   "category": "box",
+   "score": 0.263,
+   "box": [
+    952.9,
+    1624.4,
+    1272.3,
+    1811.8
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 5,
+   "photo": "pexels_18063446.jpeg",
+   "category": "clothes",
+   "score": 0.298,
+   "box": [
+    255.0,
+    531.0,
+    808.0,
+    716.5
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 6,
+   "photo": "pexels_18676193.jpeg",
+   "category": "shoes",
+   "score": 0.276,
+   "box": [
+    0.9,
+    2141.3,
+    232.0,
+    2385.4
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 7,
+   "photo": "pexels_20988472.jpeg",
+   "category": "shoes",
+   "score": 0.278,
+   "box": [
+    1003.4,
+    1644.9,
+    1245.8,
+    2016.4
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 8,
+   "photo": "pexels_27525021.jpeg",
+   "category": "shoes",
+   "score": 0.296,
+   "box": [
+    416.8,
+    986.8,
+    722.5,
+    1246.9
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 9,
+   "photo": "pexels_27525021.jpeg",
+   "category": "box",
+   "score": 0.281,
+   "box": [
+    32.0,
+    1456.1,
+    315.4,
+    1722.2
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 10,
+   "photo": "pexels_32772137.jpeg",
+   "category": "bottle",
+   "score": 0.282,
+   "box": [
+    271.7,
+    46.0,
+    294.1,
+    100.4
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 11,
+   "photo": "pexels_32772137.jpeg",
+   "category": "clothes",
+   "score": 0.25,
+   "box": [
+    945.1,
+    77.4,
+    1155.9,
+    281.2
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 12,
+   "photo": "pexels_32772137.jpeg",
+   "category": "bottle",
+   "score": 0.251,
+   "box": [
+    200.1,
+    319.4,
+    220.5,
+    375.0
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 13,
+   "photo": "pexels_32772137.jpeg",
+   "category": "book",
+   "score": 0.262,
+   "box": [
+    1298.2,
+    506.3,
+    1373.0,
+    663.8
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 14,
+   "photo": "pexels_37073368.jpeg",
+   "category": "box",
+   "score": 0.258,
+   "box": [
+    0.1,
+    25.5,
+    1600.1,
+    896.4
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 15,
+   "photo": "pexels_37073368.jpeg",
+   "category": "clothes",
+   "score": 0.261,
+   "box": [
+    0.9,
+    158.9,
+    753.7,
+    893.9
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 16,
+   "photo": "pexels_3747507.jpeg",
+   "category": "book",
+   "score": 0.258,
+   "box": [
+    0.1,
+    1911.4,
+    126.6,
+    2185.7
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 17,
+   "photo": "pexels_4046082.jpeg",
+   "category": "bottle",
+   "score": 0.272,
+   "box": [
+    1307.6,
+    322.5,
+    1327.7,
+    366.3
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 18,
+   "photo": "pexels_4046082.jpeg",
+   "category": "clothes",
+   "score": 0.259,
+   "box": [
+    -0.1,
+    381.6,
+    65.1,
+    529.0
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 19,
+   "photo": "pexels_4046082.jpeg",
+   "category": "box",
+   "score": 0.274,
+   "box": [
+    1447.7,
+    595.7,
+    1548.0,
+    724.2
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 20,
+   "photo": "pexels_4046082.jpeg",
+   "category": "book",
+   "score": 0.288,
+   "box": [
+    1181.3,
+    777.0,
+    1342.1,
+    820.0
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 21,
+   "photo": "pexels_7034092.jpeg",
+   "category": "book",
+   "score": 0.273,
+   "box": [
+    837.3,
+    452.4,
+    1585.3,
+    579.2
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 22,
+   "photo": "pexels_8012235.jpeg",
+   "category": "clothes",
+   "score": 0.272,
+   "box": [
+    346.2,
+    1847.5,
+    933.0,
+    2199.7
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 23,
+   "photo": "pexels_8782144.jpeg",
+   "category": "clothes",
+   "score": 0.256,
+   "box": [
+    0.3,
+    8.5,
+    1599.6,
+    2391.2
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 24,
+   "photo": "pexels_8782144.jpeg",
+   "category": "bag",
+   "score": 0.25,
+   "box": [
+    974.3,
+    1052.9,
+    1233.6,
+    1315.4
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 25,
+   "photo": "pexels_8782144.jpeg",
+   "category": "book",
+   "score": 0.257,
+   "box": [
+    843.4,
+    1499.5,
+    1085.8,
+    1571.4
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 26,
+   "photo": "pexels_8782144.jpeg",
+   "category": "box",
+   "score": 0.288,
+   "box": [
+    1002.2,
+    2200.1,
+    1405.4,
+    2398.8
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 27,
+   "photo": "unsplash_6jA6eVsRJ6Q.jpg",
+   "category": "box",
+   "score": 0.284,
+   "box": [
+    531.6,
+    667.5,
+    668.5,
+    845.2
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 28,
+   "photo": "unsplash_IlmDnJg5cg.jpg",
+   "category": "bag",
+   "score": 0.275,
+   "box": [
+    46.4,
+    -0.2,
+    1599.0,
+    731.0
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 29,
+   "photo": "unsplash_JUWY3uzN_Is.jpg",
+   "category": "box",
+   "score": 0.266,
+   "box": [
+    675.2,
+    224.1,
+    760.0,
+    351.7
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 30,
+   "photo": "unsplash_JUWY3uzN_Is.jpg",
+   "category": "box",
+   "score": 0.271,
+   "box": [
+    285.0,
+    255.6,
+    614.5,
+    465.5
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 31,
+   "photo": "unsplash_JUWY3uzN_Is.jpg",
+   "category": "box",
+   "score": 0.256,
+   "box": [
+    117.2,
+    552.5,
+    377.1,
+    690.4
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 32,
+   "photo": "unsplash_JUWY3uzN_Is.jpg",
+   "category": "box",
+   "score": 0.257,
+   "box": [
+    897.5,
+    950.7,
+    1025.7,
+    1198.5
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 33,
+   "photo": "unsplash_bSoV4nbrkzA.jpg",
+   "category": "box",
+   "score": 0.259,
+   "box": [
+    613.9,
+    685.7,
+    676.9,
+    734.9
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 34,
+   "photo": "unsplash_bSoV4nbrkzA.jpg",
+   "category": "box",
+   "score": 0.288,
+   "box": [
+    944.7,
+    705.1,
+    1035.2,
+    818.2
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 35,
+   "photo": "unsplash_bSoV4nbrkzA.jpg",
+   "category": "book",
+   "score": 0.258,
+   "box": [
+    237.9,
+    944.5,
+    329.9,
+    1132.9
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 36,
+   "photo": "unsplash_bSoV4nbrkzA.jpg",
+   "category": "book",
+   "score": 0.253,
+   "box": [
+    1265.3,
+    1063.4,
+    1471.2,
+    1170.6
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 37,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "bottle",
+   "score": 0.265,
+   "box": [
+    602.5,
+    869.9,
+    665.7,
+    958.4
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 38,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "box",
+   "score": 0.252,
+   "box": [
+    0.4,
+    920.1,
+    117.9,
+    993.6
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 39,
+   "photo": "unsplash_eZAvjULkrsY.jpg",
+   "category": "clothes",
+   "score": 0.264,
+   "box": [
+    426.5,
+    164.4,
+    836.1,
+    411.2
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 40,
+   "photo": "unsplash_eZAvjULkrsY.jpg",
+   "category": "clothes",
+   "score": 0.277,
+   "box": [
+    625.2,
+    170.9,
+    1032.8,
+    716.2
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 41,
+   "photo": "unsplash_nzYc3Mcbh2E.jpg",
+   "category": "book",
+   "score": 0.273,
+   "box": [
+    1107.6,
+    1697.6,
+    1600.1,
+    2097.9
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 42,
+   "photo": "web1.webp",
+   "category": "bag",
+   "score": 0.292,
+   "box": [
+    0.2,
+    285.3,
+    122.7,
+    439.3
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 43,
+   "photo": "web1.webp",
+   "category": "clothes",
+   "score": 0.253,
+   "box": [
+    0.0,
+    659.8,
+    85.8,
+    827.5
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 44,
+   "photo": "web1.webp",
+   "category": "clothes",
+   "score": 0.258,
+   "box": [
+    514.9,
+    752.0,
+    1020.9,
+    866.5
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 45,
+   "photo": "web1.webp",
+   "category": "clothes",
+   "score": 0.258,
+   "box": [
+    460.7,
+    760.3,
+    702.5,
+    845.0
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 46,
+   "photo": "web1.webp",
+   "category": "clothes",
+   "score": 0.283,
+   "box": [
+    696.8,
+    792.2,
+    1020.3,
+    865.4
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 47,
+   "photo": "web2.webp",
+   "category": "clothes",
+   "score": 0.29,
+   "box": [
+    599.1,
+    376.7,
+    806.0,
+    522.2
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 48,
+   "photo": "web2.webp",
+   "category": "bottle",
+   "score": 0.283,
+   "box": [
+    440.4,
+    518.5,
+    458.1,
+    556.9
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 49,
+   "photo": "web2.webp",
+   "category": "bottle",
+   "score": 0.259,
+   "box": [
+    200.9,
+    545.8,
+    221.3,
+    604.7
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 50,
+   "photo": "web2.webp",
+   "category": "book",
+   "score": 0.256,
+   "box": [
+    251.8,
+    834.3,
+    381.2,
+    911.8
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 51,
+   "photo": "web4.png",
+   "category": "box",
+   "score": 0.268,
+   "box": [
+    99.6,
+    153.9,
+    154.7,
+    207.4
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 52,
+   "photo": "web4.png",
+   "category": "book",
+   "score": 0.256,
+   "box": [
+    332.0,
+    205.2,
+    363.5,
+    220.4
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 53,
+   "photo": "web5.webp",
+   "category": "box",
+   "score": 0.283,
+   "box": [
+    430.5,
+    46.8,
+    493.9,
+    104.5
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 54,
+   "photo": "web5.webp",
+   "category": "box",
+   "score": 0.278,
+   "box": [
+    216.7,
+    163.9,
+    272.4,
+    232.9
+   ],
+   "band": "0.25-0.30",
+   "v": "X"
+  },
+  {
+   "id": 55,
+   "photo": "web5.webp",
+   "category": "box",
+   "score": 0.266,
+   "box": [
+    413.8,
+    207.2,
+    513.3,
+    270.5
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 56,
+   "photo": "web6.webp",
+   "category": "box",
+   "score": 0.27,
+   "box": [
+    165.9,
+    195.8,
+    220.6,
+    220.6
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 57,
+   "photo": "web9.png",
+   "category": "bottle",
+   "score": 0.272,
+   "box": [
+    362.1,
+    154.8,
+    371.8,
+    172.1
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 58,
+   "photo": "web9.png",
+   "category": "clothes",
+   "score": 0.279,
+   "box": [
+    401.6,
+    226.8,
+    482.0,
+    330.9
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 59,
+   "photo": "web9.png",
+   "category": "clothes",
+   "score": 0.299,
+   "box": [
+    139.4,
+    304.2,
+    207.5,
+    357.7
+   ],
+   "band": "0.25-0.30",
+   "v": "OP"
+  },
+  {
+   "id": 60,
+   "photo": "web9.png",
+   "category": "shoes",
+   "score": 0.269,
+   "box": [
+    449.9,
+    419.4,
+    471.1,
+    448.7
+   ],
+   "band": "0.25-0.30",
+   "v": "A"
+  },
+  {
+   "id": 61,
+   "photo": "no1.jpg",
+   "category": "bottle",
+   "score": 0.217,
+   "box": [
+    53.3,
+    58.5,
+    76.3,
+    95.3
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 62,
+   "photo": "no1.jpg",
+   "category": "bottle",
+   "score": 0.245,
+   "box": [
+    452.2,
+    444.5,
+    466.9,
+    483.8
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 63,
+   "photo": "no1.jpg",
+   "category": "clothes",
+   "score": 0.215,
+   "box": [
+    406.9,
+    740.1,
+    531.5,
+    848.2
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 64,
+   "photo": "pexels_12212549.jpeg",
+   "category": "clothes",
+   "score": 0.216,
+   "box": [
+    -0.1,
+    0.7,
+    560.7,
+    537.0
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 65,
+   "photo": "pexels_27525021.jpeg",
+   "category": "clothes",
+   "score": 0.21,
+   "box": [
+    -0.1,
+    0.4,
+    1511.9,
+    2688.4
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 66,
+   "photo": "pexels_27525021.jpeg",
+   "category": "box",
+   "score": 0.247,
+   "box": [
+    0.1,
+    687.5,
+    69.7,
+    857.0
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 67,
+   "photo": "pexels_27525021.jpeg",
+   "category": "shoes",
+   "score": 0.237,
+   "box": [
+    425.6,
+    711.4,
+    691.3,
+    951.0
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 68,
+   "photo": "pexels_27525021.jpeg",
+   "category": "box",
+   "score": 0.228,
+   "box": [
+    33.5,
+    1455.9,
+    313.8,
+    1580.0
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 69,
+   "photo": "pexels_32116008.jpeg",
+   "category": "bottle",
+   "score": 0.217,
+   "box": [
+    918.0,
+    952.6,
+    970.8,
+    1138.2
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 70,
+   "photo": "pexels_32772137.jpeg",
+   "category": "bottle",
+   "score": 0.221,
+   "box": [
+    100.1,
+    3.2,
+    122.1,
+    51.0
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 71,
+   "photo": "pexels_3747507.jpeg",
+   "category": "book",
+   "score": 0.236,
+   "box": [
+    1366.0,
+    770.8,
+    1551.7,
+    878.4
+   ],
+   "band": "0.20-0.25",
+   "v": "OP"
+  },
+  {
+   "id": 72,
+   "photo": "pexels_3747507.jpeg",
+   "category": "book",
+   "score": 0.232,
+   "box": [
+    76.3,
+    1847.8,
+    596.1,
+    2197.7
+   ],
+   "band": "0.20-0.25",
+   "v": "OP"
+  },
+  {
+   "id": 73,
+   "photo": "pexels_4046082.jpeg",
+   "category": "bottle",
+   "score": 0.23,
+   "box": [
+    1241.5,
+    364.9,
+    1260.7,
+    396.9
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 74,
+   "photo": "pexels_8012235.jpeg",
+   "category": "book",
+   "score": 0.206,
+   "box": [
+    278.9,
+    1483.1,
+    472.9,
+    1554.1
+   ],
+   "band": "0.20-0.25",
+   "v": "OP"
+  },
+  {
+   "id": 75,
+   "photo": "pexels_8012235.jpeg",
+   "category": "book",
+   "score": 0.231,
+   "box": [
+    1414.4,
+    1614.1,
+    1598.2,
+    1713.8
+   ],
+   "band": "0.20-0.25",
+   "v": "OP"
+  },
+  {
+   "id": 76,
+   "photo": "pexels_8782144.jpeg",
+   "category": "clothes",
+   "score": 0.201,
+   "box": [
+    752.4,
+    1173.7,
+    1016.3,
+    1452.2
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 77,
+   "photo": "unsplash_6jA6eVsRJ6Q.jpg",
+   "category": "box",
+   "score": 0.22,
+   "box": [
+    670.6,
+    589.4,
+    801.2,
+    854.2
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 78,
+   "photo": "unsplash_JUWY3uzN_Is.jpg",
+   "category": "box",
+   "score": 0.204,
+   "box": [
+    951.7,
+    947.6,
+    1026.2,
+    1129.3
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 79,
+   "photo": "unsplash_bSoV4nbrkzA.jpg",
+   "category": "clothes",
+   "score": 0.205,
+   "box": [
+    724.9,
+    398.2,
+    907.8,
+    568.3
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 80,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "book",
+   "score": 0.228,
+   "box": [
+    624.9,
+    812.5,
+    713.8,
+    856.5
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 81,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "clothes",
+   "score": 0.218,
+   "box": [
+    1226.7,
+    842.1,
+    1427.0,
+    1066.3
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 82,
+   "photo": "web1.webp",
+   "category": "book",
+   "score": 0.21,
+   "box": [
+    694.9,
+    447.1,
+    765.6,
+    469.2
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 83,
+   "photo": "web2.webp",
+   "category": "clothes",
+   "score": 0.218,
+   "box": [
+    715.1,
+    387.2,
+    806.1,
+    501.1
+   ],
+   "band": "0.20-0.25",
+   "v": "OP"
+  },
+  {
+   "id": 84,
+   "photo": "web2.webp",
+   "category": "clothes",
+   "score": 0.21,
+   "box": [
+    544.8,
+    407.1,
+    593.7,
+    493.2
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 85,
+   "photo": "web2.webp",
+   "category": "box",
+   "score": 0.246,
+   "box": [
+    0.7,
+    717.8,
+    269.7,
+    911.5
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 86,
+   "photo": "web5.webp",
+   "category": "bottle",
+   "score": 0.222,
+   "box": [
+    366.1,
+    93.2,
+    383.1,
+    135.7
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 87,
+   "photo": "web5.webp",
+   "category": "box",
+   "score": 0.242,
+   "box": [
+    420.5,
+    140.9,
+    527.7,
+    206.6
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  },
+  {
+   "id": 88,
+   "photo": "web5.webp",
+   "category": "bottle",
+   "score": 0.204,
+   "box": [
+    425.5,
+    310.1,
+    450.3,
+    334.2
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 89,
+   "photo": "web6.webp",
+   "category": "box",
+   "score": 0.205,
+   "box": [
+    555.8,
+    218.3,
+    614.4,
+    246.0
+   ],
+   "band": "0.20-0.25",
+   "v": "X"
+  },
+  {
+   "id": 90,
+   "photo": "web6.webp",
+   "category": "box",
+   "score": 0.221,
+   "box": [
+    514.6,
+    239.9,
+    580.2,
+    286.3
+   ],
+   "band": "0.20-0.25",
+   "v": "A"
+  }
+ ]
+}
