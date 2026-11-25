@@ -29,6 +29,7 @@
   .box.selected { outline: 3px solid #fff; box-shadow: 0 0 0 2px #000; }
   .box.v-O { background: rgba(42, 157, 111, .30); }
   .box.v-P { background: rgba(58, 134, 255, .30); }
+  .box.v-U { background: rgba(140, 140, 140, .35); }
   .box.v-X { background: rgba(230, 57, 70, .30); }
   .tag { position: absolute; left: 0; top: 0; padding: 0 4px; font-size: 11px; line-height: 1.4; color: #fff; background: var(--c); white-space: nowrap; }
   #detail { white-space: pre-line; line-height: 1.5; margin-bottom: 8px; }
@@ -56,10 +57,10 @@
       <div id="detail"></div>
       <div id="btns" hidden>
         <button onclick="judge('O')">맞아요</button>
-        <button onclick="judge('P')">이미 제자리</button>
+        <button onclick="judge('U')">확인 불가</button>
         <button onclick="judge('X')">틀려요</button>
       </div>
-      <p class="muted">맞아요: 그 물건이 맞고 정리가 필요해요 · 이미 제자리: 물건은 맞는데 이미 제자리에 있어요 · 틀려요: 그 물건이 아니에요</p>
+      <p class="muted">맞아요: 그 물건이 맞아요 · 확인 불가: 사진만 봐서는 무엇인지 모르겠어요 · 틀려요: 그 물건이 아니에요 (이름이 다른 물건이면 틀려요)</p>
     </div>
     <div class="card">
       <b>내 방 통계 (안내 순서)</b>
@@ -75,8 +76,8 @@
 // 목적지별 박스 색 (visualize.py의 목적지와 같은 이름)
 const DEST_COLOR = {"옷장": "#e63946", "책장": "#1d6fdb", "가방 걸이": "#2a9d8f", "분리수거": "#f4a261",
                     "신발장": "#8338ec", "수납함": "#06d6a0", "기타": "#6e6e6e"};
-const VERDICT_KO = {O: "맞아요", P: "이미 제자리", X: "틀려요"};
-const MARK = {O: "✓", P: "●", X: "✗"};
+const VERDICT_KO = {O: "맞아요", P: "이미 제자리", X: "틀려요", U: "확인 불가"};
+const MARK = {O: "✓", P: "●", X: "✗", U: "?"};
 
 let results = {};   // {사진이름: {detections: [...]}}  서버에서 받은 탐지 결과
 let names = [];     // 사진 이름 목록
@@ -144,7 +145,7 @@ function paintBox(i) {
   const d = results[names[idx]].detections[i];
   const el = $("box" + i);
   const v = judged[keyOf(names[idx], d.box)];
-  el.classList.remove("v-O", "v-P", "v-X");
+  el.classList.remove("v-O", "v-P", "v-X", "v-U");
   if (v) el.classList.add("v-" + v);
   el.classList.toggle("selected", selected === i);
   el.firstChild.textContent = `${i + 1} ${d.label_ko}${v ? " " + MARK[v] : ""}`;
@@ -198,7 +199,7 @@ async function loadStats() {
   order.forEach((c) => {
     const s = stats[c], tr = document.createElement("tr");
     // 서버가 옛 코드이면 photos, precision_by_photo가 없으므로 있을 때만 덧붙인다
-    const cnt = s.total + "건" + (s.photos !== undefined ? " · 사진 " + s.photos + "장" : "");
+    const cnt = s.total + "건" + (s.photos !== undefined ? " · 사진 " + s.photos + "장" : "") + (s.U ? " · 확인 불가 " + s.U : "");
     const pct = Math.round(s.precision * 100) + "%" + (s.precision_by_photo !== undefined ? " (사진별 " + Math.round(s.precision_by_photo * 100) + "%)" : "");
     [catKo[c] || c, cnt, pct, s.enough ? "" : "표본 부족"].forEach((t) => {
       const td = document.createElement("td");

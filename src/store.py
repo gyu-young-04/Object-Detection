@@ -9,7 +9,7 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEEDBACK_PATH = os.path.join(ROOT, "data", "feedback.json")  # data/는 git에 올라가지 않는다
-VERDICTS = ("O", "P", "X")  # O: 맞아요(정리 필요), P: 이미 제자리, X: 틀려요
+VERDICTS = ("O", "P", "X", "U")  # O: 맞아요(정리 필요), P: 이미 제자리(초반 53건에만 씀), X: 틀려요, U: 확인 불가(사진만 보고는 알 수 없음)
 MIN_SAMPLES = 5  # 한 카테고리의 판정이 이 개수보다 적으면 "표본 부족"으로 본다
 MIN_PHOTOS = 3  # 판정이 이 장수보다 적은 사진에서만 나왔어도 "표본 부족" (한 장의 사진이 카테고리 전체를 대표하는 것을 막는다)
 
@@ -56,11 +56,13 @@ def category_stats(records):    #판정결과를 매개로 전달
     # 판정을 하나씩 보면서 카테고리별 칸(total, O, P, X)에 센다
     for r in records: #판정에서 하나씩 꺼낸다
         if r["category"] not in stats: #이 카테고리를 처음 봤는가
-            stats[r["category"]] = {"total": 0, "O": 0, "P": 0, "X": 0}
+            stats[r["category"]] = {"total": 0, "O": 0, "P": 0, "X": 0, "U": 0}
         s = stats[r["category"]] #현재의 판정(r)의 상태를 s에 저장
-        s["total"] += 1
         s[r["verdict"]] += 1
         #실제 상태를 꺼냈으니 1 증가시켜줌
+        if r["verdict"] == "U":  # 확인 불가는 정밀도를 구하는 판정 건수(total)에 넣지 않고 따로 센다
+            continue
+        s["total"] += 1
         tally = per_photo.setdefault((r["category"], r["photo"]), [0, 0])
         tally[0] += 1 if r["verdict"] in ("O", "P") else 0
         tally[1] += 1
@@ -70,11 +72,12 @@ def category_stats(records):    #판정결과를 매개로 전달
     # stats에는 카테고리별로 판정결과가 저장된 상황
     # stats.values()의 경우는 카테고리의 집계표들
     for cat, s in stats.items():
-        s["precision"] = round((s["O"] + s["P"]) / s["total"], 3)
+        # 확인 불가만 있는 카테고리는 판정한 박스(total)가 0이라 나누지 않는다
+        s["precision"] = round((s["O"] + s["P"]) / s["total"], 3) if s["total"] else 0.0
         # 사진마다 정밀도를 먼저 구하고 평균을 낸다 (박스가 많은 사진이 통계를 끌고 가지 않게)
         by_photo = [good / n for (c, _), (good, n) in per_photo.items() if c == cat]
         s["photos"] = len(by_photo)
-        s["precision_by_photo"] = round(sum(by_photo) / len(by_photo), 3)
+        s["precision_by_photo"] = round(sum(by_photo) / len(by_photo), 3) if by_photo else 0.0
         s["enough"] = s["total"] >= MIN_SAMPLES and s["photos"] >= MIN_PHOTOS
     return stats
 
