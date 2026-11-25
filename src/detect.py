@@ -10,8 +10,11 @@ MODEL_ID = "IDEA-Research/grounding-dino-tiny"
 
 #전후처리담당은 무엇인가 processor는 무엇인가 모델말고 추가적으로 뭘 받은건지 , 
 
+#모델 id로부터 processor랑 model가중치 를 받아온다
+
 def load_model():
     processor = AutoProcessor.from_pretrained(MODEL_ID) #사진을 모델에 맞게 숫자로 바꾸고 글자를 숫자토큰으로 바꾸고 모델출력을 박스 좌표로 되돌리는 통역사 (4차원좌표?)
+    # 이 모델 전용 processor(통역사) 를 인터넷에서 받아서 준비하기
     model = AutoModelForZeroShotObjectDetection.from_pretrained(MODEL_ID) #학습된 가중치들이 들어있음
     model.eval()    #학습을 하는게 아니기에 추론모드로 바꾸는 (매번 같은 결과가 나오게)
     return processor, model
@@ -23,13 +26,16 @@ def detect(image, categories, processor, model, box_threshold=0.3, text_threshol
     # 뒤에 있는 임계값 2개는 무엇이고 왜 기본값이 0.3 , 0.25인가
     text = ". ".join(categories) + "."
     inputs = processor(images=image, text=text, return_tensors="pt")
+    # 사진과 글자를 숫자로 변환하는 전처리과정
     # 사진과 카테고리를 받아와서 숫자배열 형식으로 변환 (processor가)
 
     with torch.no_grad():   #학습용 기록을 안남기는
         outputs = model(**inputs)   #모델실행 - 결과는 아직 숫자임
 
-    #숫자 날것의 출력을 박스로 바꾸는 작업
-    results = processor.post_process_grounded_object_detection( 
+    #숫자 날것의 출력을 박스로 바꾸는 작업 (모델이 출력한걸 박스로)
+    results = processor.post_process_grounded_object_detection(
+        #모델의 날것의 출력을 박스,점스,라벨로 변환하는 후처리
+
         # 위 실행을 하면 키 이름이 scores, boxes, text_labels, labels 로 담아서 돌려주도록 미리 만들어져있음
         outputs,
         inputs.input_ids,
@@ -64,6 +70,7 @@ if __name__ == "__main__": #이 파일을 직접 실행했을때만 아래가 �
 
     t0 = time.time()
     detections = detect(image, categories, processor, model)
+    #앞에서 받아온 모델이랑 이미지 , 카테고리로 탐지를 시작
     print(f"탐지 시간: {time.time() - t0:.1f}초")
 
     print(f"탐지 {len(detections)}건")

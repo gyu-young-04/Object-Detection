@@ -18,14 +18,18 @@ import time  # 시간을 재는 도구
 from PIL import Image  # 사진 파일을 여는 도구 (Pillow)
 
 # 아래 줄들은 우리가 만든 파일에서 함수를 가져온다
+# 같은 파일경로라 이렇게 바로 from 사용할수있는거지?
 from detect import detect, load_model
-from merge import merge_photos, remove_conflicts, remove_duplicates, remove_nested
+from merge import merge_photos, remove_conflicts, remove_containers, remove_duplicates
 from rules import DESTINATIONS, attach_destination, group_by_destination, summarize
 from visualize import draw_detections
 
+
 # 이 파일(src) 한 단계 위 = 프로젝트 루트 폴더
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# 우리 파일의 위치에서 dirname인 src의 dirname인 상위 폴더 루트
 DATA_DIR = os.path.join(ROOT, "data")  # 입력 사진 폴더
+# data + a.jpg → data\a.jpg 처럼 이어 붙임
 OUT_DIR = os.path.join(ROOT, "outputs")  # 결과 저장 폴더
 IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp")  # 처리할 사진 확장자
 SKIP = {"sample.jpg"}  # 처리에서 제외할 파일
@@ -43,10 +47,13 @@ def list_images():
     # data/ 폴더에서 사진 파일만 골라(확장자 확인, 제외 파일 빼고) 경로 목록을 만든다
     names = sorted(os.listdir(DATA_DIR))
     return [
-        os.path.join(DATA_DIR, n)
-        for n in names
-        if n.lower().endswith(IMAGE_EXTS) and n not in SKIP
+        os.path.join(DATA_DIR, n) # ③ 결과로 담을 값
+        for n in names # ① names를 하나씩 n에 꺼내며 반복
+        if n.lower().endswith(IMAGE_EXTS) and n not in SKIP # ② 이 조건이 참일 때만
     ]
+
+# return [] 인것부터 리스트를 리턴한다는거고 names에서 이미지경로인것만 data폴더 경로에 추가해서 
+# 그 값을 리스트에 추가하고 이런식으로 다 검사하고 난후 리스트를 리턴
 
 
 def set_size(processor, shortest_edge):
@@ -56,6 +63,7 @@ def set_size(processor, shortest_edge):
         "shortest_edge": shortest_edge,
         "longest_edge": round(shortest_edge * 1333 / 800),
     }
+
 
 
 def detect_progressive(image, categories, processor, model, contain_ratio=CONTAIN_RATIO):
@@ -69,11 +77,12 @@ def detect_progressive(image, categories, processor, model, contain_ratio=CONTAI
             d["category"] = category
         # 같은 물건의 중복 박스를 지운다
         found = remove_duplicates(found)
-        # 큰 덩어리 안에 포개진 박스를 지운다 (contain_ratio가 None이면 이 단계를 건너뜀)
+        # 작은 박스를 품은 큰 박스를 지운다 = 개별 단위 (contain_ratio가 None이면 이 단계를 건너뜀)
+        # (2026-11-25: 화면과 같은 규칙으로 통일. 예전에는 반대로 포개진 작은 박스를 지우는 remove_nested를 썼다)
         nested_dropped = 0
         if contain_ratio is not None:
             before = len(found)
-            found = remove_nested(found, contain_ratio)
+            found = remove_containers(found, contain_ratio)
             nested_dropped = before - len(found)
         # 이 카테고리의 결과와 "포개져서 버린 개수"를 바로 내보낸다
         yield category, found, nested_dropped
@@ -110,6 +119,7 @@ def build_rooms(room_args, photo_names):
 
 def main(categories, size, contain_ratio, conflict_iou, room_args):
     # 결과를 저장할 폴더를 만들고, 모델은 한 번만 불러와서 모든 사진에 재사용한다
+    # 카테고리 , 사진해상도 , 겹침처리 1, 겹침처리 2, 같은방 끼리 묶음 정보를 매개변수로 전달
     os.makedirs(OUT_DIR, exist_ok=True)
     processor, model = load_model()
     set_size(processor, size)
@@ -125,9 +135,10 @@ def main(categories, size, contain_ratio, conflict_iou, room_args):
     all_results = {}
     # data/의 사진을 하나씩 처리
     for path in list_images():
-        name = os.path.basename(path)
+        name = os.path.basename(path) # 마지막 부분(파일 이름) 만 꺼냄
         # 사진을 열고, 투명 채널이 있는 형식도 일반 색상(RGB)으로 통일
-        image = Image.open(path).convert("RGB")
+
+        image = Image.open(path).convert("RGB") #이미지경로로부터 이미지 열기
         print(name)
 
         start = time.time()
@@ -137,6 +148,15 @@ def main(categories, size, contain_ratio, conflict_iou, room_args):
         nested_total = 0
         # 카테고리가 하나 끝날 때마다 한 바퀴씩 돈다
         for category, found, nested_dropped in detect_progressive(image, categories, processor, model, contain_ratio):
+            # detect_progressive 로부터 앞의 3개의 변수값을 받는다
+            # detect_progressive 안에 카테고리 반복문이 존재한다
+            # detect_progressive 은 한번만 실행된다 하나의 카테고리가 끝나면 yield 로 값을 내보내기에 도중에 이 아래가 진행된다
+
+            #for문이고 저 함수에서 3개의 결과를 받아올거니 저 함수를 실행을 하는거야 
+            #그리고 그 과정에서 카테고리가 하나 정해지고 3개의 결과가 만들어지고 yield 가 선언됐기에 3개의 결과를 for에게 전달하는거지 
+            #그러면 for 아래가 실행이 되고 다시 돌아오는거야 그러면 함수가 다음 카테고리에 대한 결과를 만들어내고 또 yield로 내보내는거지 
+            # 그러다가 함수가 내보내지않으면 main의 for가 끝나는것
+
             elapsed = time.time() - start
             # 처음으로 결과가 나온 순간만 시간을 기록 ("첫 결과까지 걸린 시간")
             if found and first_result is None:
@@ -226,9 +246,12 @@ if __name__ == "__main__":
     parser.add_argument("categories", nargs="*", default=CORE_CATEGORIES)
     parser.add_argument("--size", type=int, default=400)
     parser.add_argument("--no-contain", action="store_true")
+    # args.no_contain = True 이 됨
     parser.add_argument("--no-conflict", action="store_true")
     parser.add_argument("--room", action="append", default=[])
     args = parser.parse_args()
+    # 이렇게 하면 위의parser는 터미널에 입력된 옵션들에 따라서 설정을 달리하는거고 
+    # 그 정보를 main함수에 제공해서 실행
     main(
         args.categories,
         args.size,
@@ -236,3 +259,5 @@ if __name__ == "__main__":
         None if args.no_conflict else CONFLICT_IOU,
         args.room,
     )
+    #"--no-contain"이라는 글자를 넘기면, argparse가 이걸 보고 "이 옵션의 값을 담을 칸 이름은 no_contain"이라고 자동으로 정해서 기억해요. 
+    # (앞의 --를 떼고, 하이픈 -을 밑줄 _로 바꾼 이름이에요.)
