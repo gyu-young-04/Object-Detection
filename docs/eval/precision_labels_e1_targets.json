@@ -1,0 +1,592 @@
+{
+ "labeler": "Claude (박스를 잘라 붙인 모음 이미지로 판정, 사용자 검수 전 초안). OP는 이름이 맞음",
+ "date": "2026-11-25",
+ "source": "E1 정리 대상 확장 후보 cup/bowl/glass jar 중 기존 6개 카테고리와의 충돌 규칙 후 살아남은 박스 45건 (tiny, 해상도 400, 점수 0.30 이상)",
+ "boxes": [
+  {
+   "id": 1,
+   "photo": "pexels_32116008.jpeg",
+   "category": "bowl",
+   "score": 0.387,
+   "box": [
+    483.9,
+    660.8,
+    688.0,
+    812.8
+   ],
+   "v": "A"
+  },
+  {
+   "id": 2,
+   "photo": "pexels_32116008.jpeg",
+   "category": "bowl",
+   "score": 0.519,
+   "box": [
+    0.1,
+    1191.2,
+    168.5,
+    1345.2
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 3,
+   "photo": "pexels_8782144.jpeg",
+   "category": "bowl",
+   "score": 0.326,
+   "box": [
+    1184.5,
+    1319.4,
+    1275.5,
+    1372.5
+   ],
+   "v": "X"
+  },
+  {
+   "id": 4,
+   "photo": "web3.png",
+   "category": "bowl",
+   "score": 0.311,
+   "box": [
+    336.0,
+    95.9,
+    383.8,
+    116.2
+   ],
+   "v": "A"
+  },
+  {
+   "id": 5,
+   "photo": "no1.jpg",
+   "category": "cup",
+   "score": 0.334,
+   "box": [
+    162.9,
+    484.6,
+    200.7,
+    540.4
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 6,
+   "photo": "no1.jpg",
+   "category": "cup",
+   "score": 0.373,
+   "box": [
+    378.5,
+    674.2,
+    459.5,
+    771.0
+   ],
+   "v": "X"
+  },
+  {
+   "id": 7,
+   "photo": "pexels_10557077.jpeg",
+   "category": "cup",
+   "score": 0.336,
+   "box": [
+    1468.5,
+    1868.7,
+    1520.7,
+    1922.3
+   ],
+   "v": "X"
+  },
+  {
+   "id": 8,
+   "photo": "pexels_32116008.jpeg",
+   "category": "cup",
+   "score": 0.363,
+   "box": [
+    490.7,
+    846.8,
+    637.0,
+    1069.9
+   ],
+   "v": "A"
+  },
+  {
+   "id": 9,
+   "photo": "pexels_32116008.jpeg",
+   "category": "cup",
+   "score": 0.338,
+   "box": [
+    809.9,
+    894.2,
+    920.1,
+    1104.3
+   ],
+   "v": "A"
+  },
+  {
+   "id": 10,
+   "photo": "pexels_32116008.jpeg",
+   "category": "cup",
+   "score": 0.304,
+   "box": [
+    1092.8,
+    910.7,
+    1179.8,
+    1058.3
+   ],
+   "v": "X"
+  },
+  {
+   "id": 11,
+   "photo": "pexels_32116008.jpeg",
+   "category": "cup",
+   "score": 0.48,
+   "box": [
+    475.4,
+    935.5,
+    559.7,
+    1138.1
+   ],
+   "v": "A"
+  },
+  {
+   "id": 12,
+   "photo": "pexels_32116008.jpeg",
+   "category": "cup",
+   "score": 0.583,
+   "box": [
+    832.2,
+    962.7,
+    935.1,
+    1183.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 13,
+   "photo": "pexels_32116008.jpeg",
+   "category": "cup",
+   "score": 0.497,
+   "box": [
+    932.2,
+    994.8,
+    1035.3,
+    1150.5
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 14,
+   "photo": "pexels_32116008.jpeg",
+   "category": "cup",
+   "score": 0.454,
+   "box": [
+    51.2,
+    1013.3,
+    180.1,
+    1202.2
+   ],
+   "v": "X"
+  },
+  {
+   "id": 15,
+   "photo": "pexels_32116008.jpeg",
+   "category": "cup",
+   "score": 0.34,
+   "box": [
+    0.3,
+    1057.4,
+    67.9,
+    1193.6
+   ],
+   "v": "X"
+  },
+  {
+   "id": 16,
+   "photo": "pexels_4046082.jpeg",
+   "category": "cup",
+   "score": 0.326,
+   "box": [
+    1538.1,
+    299.4,
+    1599.8,
+    462.0
+   ],
+   "v": "X"
+  },
+  {
+   "id": 17,
+   "photo": "pexels_8782144.jpeg",
+   "category": "cup",
+   "score": 0.351,
+   "box": [
+    1236.7,
+    1232.9,
+    1312.9,
+    1325.6
+   ],
+   "v": "X"
+  },
+  {
+   "id": 18,
+   "photo": "pexels_8782144.jpeg",
+   "category": "cup",
+   "score": 0.448,
+   "box": [
+    1448.1,
+    1346.4,
+    1554.4,
+    1467.1
+   ],
+   "v": "A"
+  },
+  {
+   "id": 19,
+   "photo": "unsplash_6jA6eVsRJ6Q.jpg",
+   "category": "cup",
+   "score": 0.317,
+   "box": [
+    694.7,
+    387.0,
+    732.6,
+    438.4
+   ],
+   "v": "A"
+  },
+  {
+   "id": 20,
+   "photo": "unsplash_MB4CeaxOw88.jpg",
+   "category": "cup",
+   "score": 0.361,
+   "box": [
+    1365.4,
+    117.2,
+    1441.8,
+    190.0
+   ],
+   "v": "X"
+  },
+  {
+   "id": 21,
+   "photo": "web2.webp",
+   "category": "cup",
+   "score": 0.354,
+   "box": [
+    238.7,
+    548.6,
+    273.6,
+    601.7
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 22,
+   "photo": "web3.png",
+   "category": "cup",
+   "score": 0.382,
+   "box": [
+    406.0,
+    93.2,
+    434.8,
+    115.8
+   ],
+   "v": "X"
+  },
+  {
+   "id": 23,
+   "photo": "web3.png",
+   "category": "cup",
+   "score": 0.439,
+   "box": [
+    124.5,
+    286.0,
+    205.8,
+    392.1
+   ],
+   "v": "A"
+  },
+  {
+   "id": 24,
+   "photo": "web4.png",
+   "category": "cup",
+   "score": 0.34,
+   "box": [
+    339.8,
+    278.7,
+    385.5,
+    334.3
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 25,
+   "photo": "web4.png",
+   "category": "cup",
+   "score": 0.431,
+   "box": [
+    47.9,
+    375.1,
+    130.1,
+    481.9
+   ],
+   "v": "A"
+  },
+  {
+   "id": 26,
+   "photo": "web5.webp",
+   "category": "cup",
+   "score": 0.411,
+   "box": [
+    599.0,
+    586.8,
+    681.5,
+    660.8
+   ],
+   "v": "X"
+  },
+  {
+   "id": 27,
+   "photo": "pexels_10557077.jpeg",
+   "category": "glass jar",
+   "score": 0.434,
+   "box": [
+    1392.3,
+    1139.9,
+    1450.8,
+    1228.6
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 28,
+   "photo": "pexels_10557077.jpeg",
+   "category": "glass jar",
+   "score": 0.505,
+   "box": [
+    134.5,
+    1518.4,
+    286.0,
+    1663.9
+   ],
+   "v": "A"
+  },
+  {
+   "id": 29,
+   "photo": "pexels_12212549.jpeg",
+   "category": "glass jar",
+   "score": 0.756,
+   "box": [
+    1174.7,
+    636.2,
+    1460.5,
+    940.1
+   ],
+   "v": "A"
+  },
+  {
+   "id": 30,
+   "photo": "pexels_27525021.jpeg",
+   "category": "glass jar",
+   "score": 0.401,
+   "box": [
+    70.4,
+    1544.6,
+    293.5,
+    1721.8
+   ],
+   "v": "X"
+  },
+  {
+   "id": 31,
+   "photo": "pexels_32116008.jpeg",
+   "category": "glass jar",
+   "score": 0.55,
+   "box": [
+    1006.5,
+    650.5,
+    1117.4,
+    1018.0
+   ],
+   "v": "A"
+  },
+  {
+   "id": 32,
+   "photo": "pexels_37073368.jpeg",
+   "category": "glass jar",
+   "score": 0.344,
+   "box": [
+    0.2,
+    39.4,
+    1599.6,
+    894.7
+   ],
+   "v": "X"
+  },
+  {
+   "id": 33,
+   "photo": "pexels_4046082.jpeg",
+   "category": "glass jar",
+   "score": 0.533,
+   "box": [
+    1155.5,
+    572.7,
+    1254.6,
+    688.2
+   ],
+   "v": "X"
+  },
+  {
+   "id": 34,
+   "photo": "pexels_4046082.jpeg",
+   "category": "glass jar",
+   "score": 0.411,
+   "box": [
+    1226.1,
+    624.3,
+    1304.5,
+    747.6
+   ],
+   "v": "X"
+  },
+  {
+   "id": 35,
+   "photo": "pexels_7034092.jpeg",
+   "category": "glass jar",
+   "score": 0.343,
+   "box": [
+    809.1,
+    1310.0,
+    1599.4,
+    1834.4
+   ],
+   "v": "X"
+  },
+  {
+   "id": 36,
+   "photo": "pexels_8454342.jpeg",
+   "category": "glass jar",
+   "score": 0.313,
+   "box": [
+    5.9,
+    -0.3,
+    1595.8,
+    2399.7
+   ],
+   "v": "X"
+  },
+  {
+   "id": 37,
+   "photo": "pexels_8782144.jpeg",
+   "category": "glass jar",
+   "score": 0.649,
+   "box": [
+    1044.1,
+    1965.4,
+    1288.1,
+    2207.0
+   ],
+   "v": "X"
+  },
+  {
+   "id": 38,
+   "photo": "pexels_8793475.jpeg",
+   "category": "glass jar",
+   "score": 0.396,
+   "box": [
+    820.0,
+    0.1,
+    1036.9,
+    88.3
+   ],
+   "v": "X"
+  },
+  {
+   "id": 39,
+   "photo": "unsplash_6jA6eVsRJ6Q.jpg",
+   "category": "glass jar",
+   "score": 0.326,
+   "box": [
+    735.3,
+    349.5,
+    774.8,
+    403.9
+   ],
+   "v": "A"
+  },
+  {
+   "id": 40,
+   "photo": "unsplash_bSoV4nbrkzA.jpg",
+   "category": "glass jar",
+   "score": 0.45,
+   "box": [
+    469.0,
+    668.7,
+    536.5,
+    750.9
+   ],
+   "v": "X"
+  },
+  {
+   "id": 41,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "glass jar",
+   "score": 0.424,
+   "box": [
+    281.7,
+    682.9,
+    311.3,
+    734.7
+   ],
+   "v": "X"
+  },
+  {
+   "id": 42,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "glass jar",
+   "score": 0.326,
+   "box": [
+    600.3,
+    871.5,
+    662.6,
+    958.3
+   ],
+   "v": "X"
+  },
+  {
+   "id": 43,
+   "photo": "unsplash_eZAvjULkrsY.jpg",
+   "category": "glass jar",
+   "score": 0.301,
+   "box": [
+    852.1,
+    657.7,
+    958.7,
+    804.8
+   ],
+   "v": "X"
+  },
+  {
+   "id": 44,
+   "photo": "web2.webp",
+   "category": "glass jar",
+   "score": 0.406,
+   "box": [
+    212.2,
+    464.0,
+    268.4,
+    598.2
+   ],
+   "v": "A"
+  },
+  {
+   "id": 45,
+   "photo": "web9.png",
+   "category": "glass jar",
+   "score": 0.422,
+   "box": [
+    375.6,
+    384.9,
+    389.6,
+    420.1
+   ],
+   "v": "X"
+  }
+ ]
+}
