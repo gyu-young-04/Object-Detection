@@ -1,0 +1,1535 @@
+{
+ "labeler": "Claude (박스를 잘라 붙인 모음 이미지로 판정, 사용자 검수 전 초안). OP는 이름이 맞음",
+ "date": "2026-11-27",
+ "source": "미끼 후보(cushion, blanket, comforter, pillow, shelf)를 기존 채점 박스 306건과 충돌 규칙(겹침 0.7, 점수 높은 쪽)에 함께 넣어 살아남은 미끼 박스 117건. tiny, 해상도 400, 점수 0.30 이상",
+ "criteria": {
+  "cushion/pillow": "베개·쿠션이 맞음",
+  "blanket/comforter": "이불·담요·침구 덮개가 맞음(침대 위 덩이 포함)",
+  "shelf": "선반·책장·수납장·서랍장·장롱 등 수납 가구가 맞음(주방 수납장 포함)",
+  "A": "일부만 보이거나 비슷한 다른 물건(소파, 매트리스, 러그, 얇은 조각 등)",
+  "X": "다른 물건(옷, 가방, 책상, 냉장고 등)"
+ },
+ "boxes": [
+  {
+   "id": 1,
+   "photo": "pexels_8012235.jpeg",
+   "category": "cushion",
+   "score": 0.724,
+   "box": [
+    754.8,
+    1528.5,
+    1151.4,
+    1799.5
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 2,
+   "photo": "web6.webp",
+   "category": "cushion",
+   "score": 0.526,
+   "box": [
+    198.5,
+    402.8,
+    366.2,
+    515.1
+   ],
+   "v": "X"
+  },
+  {
+   "id": 3,
+   "photo": "pexels_7034092.jpeg",
+   "category": "cushion",
+   "score": 0.482,
+   "box": [
+    0.0,
+    1269.1,
+    1600.0,
+    2398.9
+   ],
+   "v": "X"
+  },
+  {
+   "id": 4,
+   "photo": "pexels_4046082.jpeg",
+   "category": "cushion",
+   "score": 0.463,
+   "box": [
+    212.3,
+    336.0,
+    467.1,
+    522.7
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 5,
+   "photo": "pexels_20988472.jpeg",
+   "category": "cushion",
+   "score": 0.43,
+   "box": [
+    837.8,
+    16.2,
+    1590.1,
+    455.0
+   ],
+   "v": "A"
+  },
+  {
+   "id": 6,
+   "photo": "pexels_8454342.jpeg",
+   "category": "cushion",
+   "score": 0.406,
+   "box": [
+    446.7,
+    346.2,
+    780.3,
+    1098.6
+   ],
+   "v": "X"
+  },
+  {
+   "id": 7,
+   "photo": "web3.png",
+   "category": "cushion",
+   "score": 0.405,
+   "box": [
+    197.2,
+    121.6,
+    319.9,
+    188.6
+   ],
+   "v": "A"
+  },
+  {
+   "id": 8,
+   "photo": "pexels_32772137.jpeg",
+   "category": "cushion",
+   "score": 0.387,
+   "box": [
+    863.0,
+    655.0,
+    1221.8,
+    828.1
+   ],
+   "v": "X"
+  },
+  {
+   "id": 9,
+   "photo": "unsplash_JUWY3uzN_Is.jpg",
+   "category": "cushion",
+   "score": 0.357,
+   "box": [
+    1027.7,
+    872.2,
+    1325.1,
+    1072.5
+   ],
+   "v": "X"
+  },
+  {
+   "id": 10,
+   "photo": "pexels_8793475.jpeg",
+   "category": "cushion",
+   "score": 0.352,
+   "box": [
+    949.2,
+    464.9,
+    1598.5,
+    1861.8
+   ],
+   "v": "X"
+  },
+  {
+   "id": 11,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "cushion",
+   "score": 0.35,
+   "box": [
+    814.8,
+    730.8,
+    1209.5,
+    1028.8
+   ],
+   "v": "A"
+  },
+  {
+   "id": 12,
+   "photo": "pexels_37073368.jpeg",
+   "category": "cushion",
+   "score": 0.334,
+   "box": [
+    0.0,
+    214.9,
+    404.0,
+    417.8
+   ],
+   "v": "A"
+  },
+  {
+   "id": 13,
+   "photo": "pexels_8454342.jpeg",
+   "category": "cushion",
+   "score": 0.33,
+   "box": [
+    433.3,
+    1194.0,
+    833.6,
+    1602.2
+   ],
+   "v": "X"
+  },
+  {
+   "id": 14,
+   "photo": "pexels_8793475.jpeg",
+   "category": "cushion",
+   "score": 0.33,
+   "box": [
+    54.0,
+    332.7,
+    1041.1,
+    1397.6
+   ],
+   "v": "X"
+  },
+  {
+   "id": 15,
+   "photo": "web4.png",
+   "category": "cushion",
+   "score": 0.327,
+   "box": [
+    401.5,
+    278.8,
+    497.1,
+    331.4
+   ],
+   "v": "X"
+  },
+  {
+   "id": 16,
+   "photo": "pexels_32772137.jpeg",
+   "category": "cushion",
+   "score": 0.323,
+   "box": [
+    81.9,
+    720.0,
+    336.2,
+    1064.1
+   ],
+   "v": "X"
+  },
+  {
+   "id": 17,
+   "photo": "unsplash_6jA6eVsRJ6Q.jpg",
+   "category": "cushion",
+   "score": 0.316,
+   "box": [
+    810.6,
+    308.8,
+    1245.4,
+    727.5
+   ],
+   "v": "X"
+  },
+  {
+   "id": 18,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "cushion",
+   "score": 0.308,
+   "box": [
+    859.2,
+    834.8,
+    1011.2,
+    890.9
+   ],
+   "v": "A"
+  },
+  {
+   "id": 19,
+   "photo": "web2.webp",
+   "category": "cushion",
+   "score": 0.307,
+   "box": [
+    879.0,
+    817.6,
+    909.8,
+    910.7
+   ],
+   "v": "X"
+  },
+  {
+   "id": 20,
+   "photo": "pexels_5905436.jpeg",
+   "category": "blanket",
+   "score": 0.728,
+   "box": [
+    730.1,
+    633.4,
+    1596.7,
+    1930.0
+   ],
+   "v": "X"
+  },
+  {
+   "id": 21,
+   "photo": "pexels_8472909.jpeg",
+   "category": "blanket",
+   "score": 0.644,
+   "box": [
+    1148.8,
+    0.4,
+    1599.0,
+    412.7
+   ],
+   "v": "X"
+  },
+  {
+   "id": 22,
+   "photo": "unsplash_MB4CeaxOw88.jpg",
+   "category": "blanket",
+   "score": 0.578,
+   "box": [
+    547.5,
+    412.1,
+    1060.7,
+    861.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 23,
+   "photo": "pexels_4887253.jpeg",
+   "category": "blanket",
+   "score": 0.527,
+   "box": [
+    0.3,
+    101.7,
+    584.1,
+    1421.7
+   ],
+   "v": "A"
+  },
+  {
+   "id": 24,
+   "photo": "pexels_4046082.jpeg",
+   "category": "blanket",
+   "score": 0.518,
+   "box": [
+    -0.0,
+    511.3,
+    496.0,
+    645.4
+   ],
+   "v": "A"
+  },
+  {
+   "id": 25,
+   "photo": "pexels_5905436.jpeg",
+   "category": "blanket",
+   "score": 0.493,
+   "box": [
+    0.3,
+    339.5,
+    638.7,
+    1388.9
+   ],
+   "v": "X"
+  },
+  {
+   "id": 26,
+   "photo": "pexels_4887253.jpeg",
+   "category": "blanket",
+   "score": 0.409,
+   "box": [
+    2.3,
+    103.0,
+    1599.6,
+    1652.8
+   ],
+   "v": "A"
+  },
+  {
+   "id": 27,
+   "photo": "no1.jpg",
+   "category": "blanket",
+   "score": 0.39,
+   "box": [
+    65.9,
+    576.2,
+    344.9,
+    835.9
+   ],
+   "v": "A"
+  },
+  {
+   "id": 28,
+   "photo": "web5.webp",
+   "category": "blanket",
+   "score": 0.385,
+   "box": [
+    104.7,
+    97.3,
+    230.2,
+    339.9
+   ],
+   "v": "X"
+  },
+  {
+   "id": 29,
+   "photo": "pexels_17916550.jpeg",
+   "category": "blanket",
+   "score": 0.365,
+   "box": [
+    12.3,
+    31.3,
+    898.2,
+    2009.3
+   ],
+   "v": "X"
+  },
+  {
+   "id": 30,
+   "photo": "web5.webp",
+   "category": "blanket",
+   "score": 0.354,
+   "box": [
+    624.3,
+    175.7,
+    681.8,
+    276.5
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 31,
+   "photo": "pexels_12212549.jpeg",
+   "category": "blanket",
+   "score": 0.351,
+   "box": [
+    -0.4,
+    1.1,
+    505.8,
+    260.3
+   ],
+   "v": "A"
+  },
+  {
+   "id": 32,
+   "photo": "web9.png",
+   "category": "blanket",
+   "score": 0.336,
+   "box": [
+    151.7,
+    437.0,
+    325.4,
+    477.1
+   ],
+   "v": "X"
+  },
+  {
+   "id": 33,
+   "photo": "unsplash_eZAvjULkrsY.jpg",
+   "category": "comforter",
+   "score": 0.741,
+   "box": [
+    238.9,
+    90.6,
+    1514.8,
+    984.6
+   ],
+   "v": "X"
+  },
+  {
+   "id": 34,
+   "photo": "web1.webp",
+   "category": "comforter",
+   "score": 0.658,
+   "box": [
+    267.0,
+    752.8,
+    1219.2,
+    911.5
+   ],
+   "v": "A"
+  },
+  {
+   "id": 35,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "comforter",
+   "score": 0.644,
+   "box": [
+    1.5,
+    844.5,
+    1080.0,
+    1065.4
+   ],
+   "v": "A"
+  },
+  {
+   "id": 36,
+   "photo": "web3.png",
+   "category": "comforter",
+   "score": 0.608,
+   "box": [
+    -0.1,
+    150.9,
+    352.3,
+    394.8
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 37,
+   "photo": "pexels_10557077.jpeg",
+   "category": "comforter",
+   "score": 0.599,
+   "box": [
+    231.3,
+    1679.2,
+    1518.0,
+    2293.5
+   ],
+   "v": "X"
+  },
+  {
+   "id": 38,
+   "photo": "unsplash_bSoV4nbrkzA.jpg",
+   "category": "comforter",
+   "score": 0.58,
+   "box": [
+    50.3,
+    1085.7,
+    935.1,
+    1199.0
+   ],
+   "v": "A"
+  },
+  {
+   "id": 39,
+   "photo": "pexels_17916550.jpeg",
+   "category": "comforter",
+   "score": 0.573,
+   "box": [
+    12.9,
+    1534.2,
+    738.2,
+    2006.1
+   ],
+   "v": "X"
+  },
+  {
+   "id": 40,
+   "photo": "pexels_12212549.jpeg",
+   "category": "comforter",
+   "score": 0.549,
+   "box": [
+    0.3,
+    0.6,
+    563.0,
+    539.5
+   ],
+   "v": "A"
+  },
+  {
+   "id": 41,
+   "photo": "web4.png",
+   "category": "comforter",
+   "score": 0.52,
+   "box": [
+    0.1,
+    260.2,
+    111.9,
+    491.7
+   ],
+   "v": "A"
+  },
+  {
+   "id": 42,
+   "photo": "no1.jpg",
+   "category": "comforter",
+   "score": 0.492,
+   "box": [
+    2.5,
+    142.7,
+    472.1,
+    359.5
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 43,
+   "photo": "web4.png",
+   "category": "comforter",
+   "score": 0.492,
+   "box": [
+    385.0,
+    289.9,
+    496.9,
+    491.0
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 44,
+   "photo": "unsplash_MB4CeaxOw88.jpg",
+   "category": "comforter",
+   "score": 0.492,
+   "box": [
+    92.4,
+    397.2,
+    1593.9,
+    1061.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 45,
+   "photo": "unsplash_JUWY3uzN_Is.jpg",
+   "category": "comforter",
+   "score": 0.485,
+   "box": [
+    995.7,
+    788.8,
+    1501.0,
+    1198.0
+   ],
+   "v": "X"
+  },
+  {
+   "id": 46,
+   "photo": "pexels_20988472.jpeg",
+   "category": "comforter",
+   "score": 0.478,
+   "box": [
+    410.4,
+    1519.9,
+    1164.8,
+    2004.5
+   ],
+   "v": "X"
+  },
+  {
+   "id": 47,
+   "photo": "pexels_27525021.jpeg",
+   "category": "comforter",
+   "score": 0.471,
+   "box": [
+    201.1,
+    1654.5,
+    762.3,
+    2209.5
+   ],
+   "v": "X"
+  },
+  {
+   "id": 48,
+   "photo": "web5.webp",
+   "category": "comforter",
+   "score": 0.426,
+   "box": [
+    404.4,
+    493.7,
+    642.4,
+    692.6
+   ],
+   "v": "X"
+  },
+  {
+   "id": 49,
+   "photo": "pexels_37073368.jpeg",
+   "category": "comforter",
+   "score": 0.418,
+   "box": [
+    0.9,
+    157.8,
+    752.8,
+    892.6
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 50,
+   "photo": "unsplash_nzYc3Mcbh2E.jpg",
+   "category": "comforter",
+   "score": 0.393,
+   "box": [
+    -0.1,
+    967.8,
+    1599.9,
+    2397.5
+   ],
+   "v": "X"
+  },
+  {
+   "id": 51,
+   "photo": "pexels_18063446.jpeg",
+   "category": "comforter",
+   "score": 0.375,
+   "box": [
+    260.1,
+    529.8,
+    808.8,
+    716.2
+   ],
+   "v": "A"
+  },
+  {
+   "id": 52,
+   "photo": "pexels_37073368.jpeg",
+   "category": "comforter",
+   "score": 0.373,
+   "box": [
+    2.1,
+    164.1,
+    1594.2,
+    894.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 53,
+   "photo": "web6.webp",
+   "category": "comforter",
+   "score": 0.366,
+   "box": [
+    483.5,
+    238.7,
+    761.9,
+    560.9
+   ],
+   "v": "X"
+  },
+  {
+   "id": 54,
+   "photo": "pexels_32116008.jpeg",
+   "category": "comforter",
+   "score": 0.356,
+   "box": [
+    1099.3,
+    824.5,
+    1599.6,
+    1476.1
+   ],
+   "v": "A"
+  },
+  {
+   "id": 55,
+   "photo": "web5.webp",
+   "category": "comforter",
+   "score": 0.344,
+   "box": [
+    19.9,
+    329.1,
+    196.8,
+    544.4
+   ],
+   "v": "X"
+  },
+  {
+   "id": 56,
+   "photo": "unsplash_Mb1cVr467w4.jpg",
+   "category": "comforter",
+   "score": 0.336,
+   "box": [
+    5.1,
+    446.3,
+    1592.8,
+    1061.0
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 57,
+   "photo": "pexels_37073368.jpeg",
+   "category": "pillow",
+   "score": 0.711,
+   "box": [
+    838.1,
+    206.1,
+    1593.2,
+    562.4
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 58,
+   "photo": "unsplash_MB4CeaxOw88.jpg",
+   "category": "pillow",
+   "score": 0.677,
+   "box": [
+    459.3,
+    234.2,
+    789.0,
+    476.0
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 59,
+   "photo": "pexels_10557077.jpeg",
+   "category": "pillow",
+   "score": 0.644,
+   "box": [
+    839.6,
+    1143.9,
+    1167.7,
+    1379.9
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 60,
+   "photo": "pexels_10557077.jpeg",
+   "category": "pillow",
+   "score": 0.624,
+   "box": [
+    470.8,
+    1149.1,
+    733.2,
+    1381.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 61,
+   "photo": "web3.png",
+   "category": "pillow",
+   "score": 0.504,
+   "box": [
+    0.0,
+    184.8,
+    81.7,
+    248.5
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 62,
+   "photo": "no1.jpg",
+   "category": "pillow",
+   "score": 0.468,
+   "box": [
+    134.0,
+    61.3,
+    275.9,
+    193.4
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 63,
+   "photo": "pexels_18063446.jpeg",
+   "category": "pillow",
+   "score": 0.458,
+   "box": [
+    -0.1,
+    189.2,
+    237.6,
+    284.9
+   ],
+   "v": "A"
+  },
+  {
+   "id": 64,
+   "photo": "unsplash_Mb1cVr467w4.jpg",
+   "category": "pillow",
+   "score": 0.448,
+   "box": [
+    155.4,
+    454.4,
+    798.5,
+    695.7
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 65,
+   "photo": "unsplash_Mb1cVr467w4.jpg",
+   "category": "pillow",
+   "score": 0.386,
+   "box": [
+    2.4,
+    287.5,
+    582.4,
+    631.2
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 66,
+   "photo": "no1.jpg",
+   "category": "pillow",
+   "score": 0.323,
+   "box": [
+    3.5,
+    82.6,
+    123.6,
+    198.6
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 67,
+   "photo": "pexels_4046082.jpeg",
+   "category": "pillow",
+   "score": 0.301,
+   "box": [
+    0.0,
+    381.2,
+    64.0,
+    529.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 68,
+   "photo": "web9.png",
+   "category": "shelf",
+   "score": 0.659,
+   "box": [
+    12.9,
+    100.0,
+    308.5,
+    270.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 69,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "shelf",
+   "score": 0.642,
+   "box": [
+    534.4,
+    529.0,
+    793.9,
+    856.5
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 70,
+   "photo": "pexels_4046082.jpeg",
+   "category": "shelf",
+   "score": 0.563,
+   "box": [
+    1070.1,
+    396.1,
+    1464.4,
+    663.4
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 71,
+   "photo": "pexels_18063446.jpeg",
+   "category": "shelf",
+   "score": 0.558,
+   "box": [
+    709.3,
+    122.4,
+    1143.7,
+    295.4
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 72,
+   "photo": "web9.png",
+   "category": "shelf",
+   "score": 0.532,
+   "box": [
+    306.2,
+    156.3,
+    481.9,
+    266.2
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 73,
+   "photo": "web5.webp",
+   "category": "shelf",
+   "score": 0.481,
+   "box": [
+    391.6,
+    140.9,
+    528.5,
+    321.3
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 74,
+   "photo": "no1.jpg",
+   "category": "shelf",
+   "score": 0.48,
+   "box": [
+    298.0,
+    559.9,
+    610.9,
+    910.8
+   ],
+   "v": "A"
+  },
+  {
+   "id": 75,
+   "photo": "web2.webp",
+   "category": "shelf",
+   "score": 0.467,
+   "box": [
+    432.5,
+    391.0,
+    547.9,
+    495.2
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 76,
+   "photo": "unsplash_nzYc3Mcbh2E.jpg",
+   "category": "shelf",
+   "score": 0.464,
+   "box": [
+    1222.2,
+    498.0,
+    1600.2,
+    988.0
+   ],
+   "v": "A"
+  },
+  {
+   "id": 77,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.449,
+   "box": [
+    91.5,
+    0.2,
+    213.0,
+    69.8
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 78,
+   "photo": "web2.webp",
+   "category": "shelf",
+   "score": 0.433,
+   "box": [
+    605.6,
+    291.9,
+    699.9,
+    367.9
+   ],
+   "v": "X"
+  },
+  {
+   "id": 79,
+   "photo": "web2.webp",
+   "category": "shelf",
+   "score": 0.431,
+   "box": [
+    295.1,
+    192.5,
+    384.3,
+    295.8
+   ],
+   "v": "A"
+  },
+  {
+   "id": 80,
+   "photo": "pexels_8472909.jpeg",
+   "category": "shelf",
+   "score": 0.431,
+   "box": [
+    1.8,
+    8.5,
+    1597.8,
+    463.0
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 81,
+   "photo": "pexels_10557077.jpeg",
+   "category": "shelf",
+   "score": 0.424,
+   "box": [
+    1204.7,
+    1221.5,
+    1553.6,
+    1690.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 82,
+   "photo": "pexels_32772137.jpeg",
+   "category": "shelf",
+   "score": 0.416,
+   "box": [
+    702.3,
+    809.6,
+    1599.6,
+    1065.9
+   ],
+   "v": "X"
+  },
+  {
+   "id": 83,
+   "photo": "web2.webp",
+   "category": "shelf",
+   "score": 0.414,
+   "box": [
+    300.0,
+    391.3,
+    431.6,
+    495.1
+   ],
+   "v": "A"
+  },
+  {
+   "id": 84,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.414,
+   "box": [
+    206.2,
+    0.3,
+    325.6,
+    71.0
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 85,
+   "photo": "pexels_8782144.jpeg",
+   "category": "shelf",
+   "score": 0.41,
+   "box": [
+    1392.3,
+    219.9,
+    1599.5,
+    2010.6
+   ],
+   "v": "A"
+  },
+  {
+   "id": 86,
+   "photo": "web2.webp",
+   "category": "shelf",
+   "score": 0.407,
+   "box": [
+    546.7,
+    393.9,
+    609.0,
+    490.2
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 87,
+   "photo": "unsplash_6jA6eVsRJ6Q.jpg",
+   "category": "shelf",
+   "score": 0.389,
+   "box": [
+    1338.0,
+    1.9,
+    1599.5,
+    643.5
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 88,
+   "photo": "web2.webp",
+   "category": "shelf",
+   "score": 0.384,
+   "box": [
+    1.1,
+    474.7,
+    421.7,
+    910.5
+   ],
+   "v": "X"
+  },
+  {
+   "id": 89,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.384,
+   "box": [
+    324.2,
+    0.5,
+    365.1,
+    72.3
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 90,
+   "photo": "pexels_32772137.jpeg",
+   "category": "shelf",
+   "score": 0.384,
+   "box": [
+    43.6,
+    0.4,
+    428.7,
+    439.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 91,
+   "photo": "pexels_8782144.jpeg",
+   "category": "shelf",
+   "score": 0.375,
+   "box": [
+    0.5,
+    8.9,
+    341.9,
+    2081.2
+   ],
+   "v": "A"
+  },
+  {
+   "id": 92,
+   "photo": "web5.webp",
+   "category": "shelf",
+   "score": 0.374,
+   "box": [
+    425.9,
+    559.3,
+    681.9,
+    910.9
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 93,
+   "photo": "unsplash_JUWY3uzN_Is.jpg",
+   "category": "shelf",
+   "score": 0.365,
+   "box": [
+    675.8,
+    223.8,
+    759.5,
+    351.0
+   ],
+   "v": "X"
+  },
+  {
+   "id": 94,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.363,
+   "box": [
+    403.9,
+    0.4,
+    451.3,
+    73.0
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 95,
+   "photo": "pexels_27525021.jpeg",
+   "category": "shelf",
+   "score": 0.359,
+   "box": [
+    -0.5,
+    0.4,
+    1511.4,
+    2688.0
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 96,
+   "photo": "pexels_3747507.jpeg",
+   "category": "shelf",
+   "score": 0.355,
+   "box": [
+    0.4,
+    1.6,
+    706.4,
+    854.8
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 97,
+   "photo": "unsplash_e30JVKSKxnU.jpg",
+   "category": "shelf",
+   "score": 0.353,
+   "box": [
+    240.8,
+    775.1,
+    497.3,
+    912.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 98,
+   "photo": "web4.png",
+   "category": "shelf",
+   "score": 0.348,
+   "box": [
+    0.1,
+    -0.0,
+    97.5,
+    273.6
+   ],
+   "v": "A"
+  },
+  {
+   "id": 99,
+   "photo": "pexels_10557077.jpeg",
+   "category": "shelf",
+   "score": 0.346,
+   "box": [
+    1559.2,
+    1171.7,
+    1599.8,
+    1620.5
+   ],
+   "v": "A"
+  },
+  {
+   "id": 100,
+   "photo": "unsplash_6jA6eVsRJ6Q.jpg",
+   "category": "shelf",
+   "score": 0.346,
+   "box": [
+    17.3,
+    426.4,
+    840.8,
+    1061.6
+   ],
+   "v": "X"
+  },
+  {
+   "id": 101,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.344,
+   "box": [
+    141.6,
+    151.1,
+    235.8,
+    222.7
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 102,
+   "photo": "web2.webp",
+   "category": "shelf",
+   "score": 0.341,
+   "box": [
+    382.2,
+    200.8,
+    551.5,
+    326.9
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 103,
+   "photo": "pexels_18063446.jpeg",
+   "category": "shelf",
+   "score": 0.338,
+   "box": [
+    236.8,
+    275.1,
+    1567.1,
+    777.7
+   ],
+   "v": "A"
+  },
+  {
+   "id": 104,
+   "photo": "web1.webp",
+   "category": "shelf",
+   "score": 0.333,
+   "box": [
+    -0.2,
+    365.8,
+    259.4,
+    746.7
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 105,
+   "photo": "pexels_32116008.jpeg",
+   "category": "shelf",
+   "score": 0.333,
+   "box": [
+    1351.5,
+    0.0,
+    1599.6,
+    537.8
+   ],
+   "v": "A"
+  },
+  {
+   "id": 106,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.331,
+   "box": [
+    235.0,
+    147.6,
+    343.3,
+    235.6
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 107,
+   "photo": "pexels_8454342.jpeg",
+   "category": "shelf",
+   "score": 0.33,
+   "box": [
+    3.4,
+    0.2,
+    1596.2,
+    2400.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 108,
+   "photo": "pexels_3747507.jpeg",
+   "category": "shelf",
+   "score": 0.329,
+   "box": [
+    1.2,
+    -0.7,
+    1587.7,
+    869.7
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 109,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.326,
+   "box": [
+    433.1,
+    140.4,
+    459.8,
+    195.3
+   ],
+   "v": "A"
+  },
+  {
+   "id": 110,
+   "photo": "pexels_8454342.jpeg",
+   "category": "shelf",
+   "score": 0.321,
+   "box": [
+    0.4,
+    -0.4,
+    432.1,
+    2399.6
+   ],
+   "v": "A"
+  },
+  {
+   "id": 111,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.319,
+   "box": [
+    344.2,
+    146.1,
+    381.1,
+    223.6
+   ],
+   "v": "A"
+  },
+  {
+   "id": 112,
+   "photo": "web4.png",
+   "category": "shelf",
+   "score": 0.316,
+   "box": [
+    419.2,
+    0.4,
+    497.0,
+    298.3
+   ],
+   "v": "A"
+  },
+  {
+   "id": 113,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.31,
+   "box": [
+    379.8,
+    142.4,
+    432.9,
+    217.1
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 114,
+   "photo": "web6.webp",
+   "category": "shelf",
+   "score": 0.31,
+   "box": [
+    364.2,
+    0.1,
+    419.3,
+    45.7
+   ],
+   "v": "OP"
+  },
+  {
+   "id": 115,
+   "photo": "pexels_10557077.jpeg",
+   "category": "shelf",
+   "score": 0.31,
+   "box": [
+    111.5,
+    680.9,
+    356.5,
+    1639.3
+   ],
+   "v": "A"
+  },
+  {
+   "id": 116,
+   "photo": "pexels_4046082.jpeg",
+   "category": "shelf",
+   "score": 0.306,
+   "box": [
+    437.8,
+    0.0,
+    779.8,
+    96.0
+   ],
+   "v": "A"
+  },
+  {
+   "id": 117,
+   "photo": "pexels_32772137.jpeg",
+   "category": "shelf",
+   "score": 0.301,
+   "box": [
+    67.3,
+    210.7,
+    378.3,
+    438.8
+   ],
+   "v": "OP"
+  }
+ ]
+}
